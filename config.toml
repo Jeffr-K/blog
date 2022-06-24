@@ -1,0 +1,4 @@
+baseURL = 'https://Jeffr-K.github.io/'
+languageCode = 'en-us'
+title = 'Gogooma Bridge '
+theme = "hugo-theme-stack"
