@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "title": "ブログ",
+    "description": "韓国語と日本語で書く個人ブログ"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "posts": "記事",
+    "about": "紹介"
+  },
+  "language": {
+    "label": "言語",
+    "ko": "한국어",
+    "ja": "日本語"
+  }
+}
