@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "reset-css";
 import "../globals.css";
 
@@ -11,6 +12,9 @@ import {
   locales,
 } from "@/shared/i18n/config";
 import { getDictionary } from "@/shared/i18n/get-dictionary";
+import { ThemeProvider } from "@/shared/components/theme/theme-provider";
+
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t||p);}catch(e){}})();`;
 
 const lineSeedSans = localFont({
   variable: "--font-line-seed-sans",
@@ -80,8 +84,16 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       className={`${lineSeedSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeScript }}
+        />
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

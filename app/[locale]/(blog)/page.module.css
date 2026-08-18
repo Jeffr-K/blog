@@ -1,0 +1,16 @@
+/* 왼쪽 여백에 고정 — content-container(46rem) 기준으로 위치 계산 */
+.profileSidebar {
+  position: fixed;
+  /* (뷰포트 - 컨텐츠폭) / 2 - 카드폭 - 간격 */
+  left: max(1rem, calc((100vw - 46rem) / 2 - 14rem));
+  top: calc(3.5rem + 2rem); /* GNB + 배너 section padding-top */
+  width: 13rem;
+  z-index: 35;
+}
+
+/* 여백이 충분하지 않으면 숨김 (content 46rem + card 13rem + gaps ~6rem ≈ 65rem) */
+@media (max-width: 65rem) {
+  .profileSidebar {
+    display: none;
+  }
+}

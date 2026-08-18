@@ -1,0 +1,52 @@
+.footer {
+  width: 100%;
+  margin-top: auto;
+  position: relative;
+  z-index: 45;
+}
+
+.inner {
+  display: flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.75rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+}
+
+.copy {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 0.5rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  background: var(--surface);
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}

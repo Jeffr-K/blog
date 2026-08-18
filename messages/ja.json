@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "title": "ブログ",
+    "title": "anonymous.rs",
     "description": "韓国語と日本語で書く個人ブログ"
   },
   "navigation": {
     "home": "ホーム",
     "posts": "記事",
-    "about": "紹介"
+    "careers": "採用"
   },
   "language": {
     "label": "言語",
