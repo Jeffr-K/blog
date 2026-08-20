@@ -1,0 +1,363 @@
+/* ════════════════════════════════════════════════════════════════
+   PROSE — 마크다운 렌더링 스타일 시스템
+   anonymous.rs 블로그 타이포그래피 규정
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Headings ─────────────────────────────────────────────────── */
+
+.h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+  color: var(--foreground);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+  color: var(--foreground);
+  margin-top: 2.75rem;
+  margin-bottom: 0.875rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 5rem;
+}
+
+.h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  color: var(--foreground);
+  margin-top: 2rem;
+  margin-bottom: 0.625rem;
+  padding-left: 0.875rem;
+  border-left: 2.5px solid #8b5cf6;
+  scroll-margin-top: 5rem;
+}
+
+.h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 5rem;
+}
+
+/* ── Paragraph ────────────────────────────────────────────────── */
+
+.p {
+  font-size: 0.9375rem;
+  line-height: 1.85;
+  color: var(--foreground);
+  opacity: 0.9;
+  margin-bottom: 1.25rem;
+}
+
+.p:last-child { margin-bottom: 0; }
+
+/* ── Inline text ──────────────────────────────────────────────── */
+
+.strong {
+  font-weight: 700;
+  color: var(--foreground);
+  opacity: 1;
+}
+
+.em {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.del {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* ── Links ────────────────────────────────────────────────────── */
+
+.a {
+  color: #8b5cf6;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-style 160ms ease, color 160ms ease;
+}
+
+.a:hover,
+.a:focus-visible {
+  text-decoration-style: solid;
+  color: #7c3aed;
+}
+
+/* ── Blockquote ───────────────────────────────────────────────── */
+
+.blockquote {
+  position: relative;
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid #8b5cf6;
+  background: color-mix(in srgb, #8b5cf6 6%, transparent);
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.blockquote p {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  margin: 0;
+  opacity: 1;
+}
+
+.blockquote strong {
+  color: #8b5cf6;
+  font-style: normal;
+}
+
+/* ── Code (inline) ────────────────────────────────────────────── */
+
+.inlineCode {
+  font-family: var(--font-mono), "SF Mono", "Fira Code", monospace;
+  font-size: 0.875em;
+  padding: 0.15em 0.45em;
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, #8b5cf6 10%, transparent);
+  color: #8b5cf6;
+  border: 1px solid color-mix(in srgb, #8b5cf6 20%, transparent);
+}
+
+[data-theme="dark"] .inlineCode {
+  background: color-mix(in srgb, #a78bfa 12%, transparent);
+  color: #a78bfa;
+  border-color: color-mix(in srgb, #a78bfa 25%, transparent);
+}
+
+/* ── Code block ───────────────────────────────────────────────── */
+
+.codeWrapper {
+  position: relative;
+  margin: 1.75rem 0;
+}
+
+.pre {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  padding: 1.25rem 1.5rem;
+}
+
+/* rehype-pretty-code: 언어 배지 */
+.pre[data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0.75rem;
+  left: 1.25rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  pointer-events: none;
+}
+
+/* rehype-pretty-code: 파일명 타이틀 */
+[data-rehype-pretty-code-title] {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-size: 0.75rem;
+  font-family: var(--font-mono), monospace;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+[data-rehype-pretty-code-title] + .codeWrapper .pre {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* 줄 강조 */
+.pre [data-highlighted-line] {
+  background: color-mix(in srgb, #8b5cf6 8%, transparent);
+  border-left: 2px solid #8b5cf6;
+  margin-left: -1.5rem;
+  padding-left: calc(1.5rem - 2px);
+  margin-right: -1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* 복사 버튼 */
+.copyBtn {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  display: grid;
+  width: 1.875rem;
+  height: 1.875rem;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  background: var(--background);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease;
+  opacity: 0;
+}
+
+.codeWrapper:hover .copyBtn,
+.copyBtn:focus-visible {
+  opacity: 1;
+}
+
+.copyBtn:hover {
+  background: var(--surface);
+  color: var(--foreground);
+}
+
+/* ── Lists ────────────────────────────────────────────────────── */
+
+.ul {
+  list-style: none;
+  padding-left: 1.375rem;
+  margin-bottom: 1.25rem;
+}
+
+.ul .li {
+  position: relative;
+  margin-bottom: 0.375rem;
+}
+
+.ul .li::before {
+  content: "";
+  position: absolute;
+  left: -1.125rem;
+  top: 0.6rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: #8b5cf6;
+}
+
+.ol {
+  list-style: none;
+  padding-left: 1.75rem;
+  margin-bottom: 1.25rem;
+  counter-reset: prose-ol;
+}
+
+.ol .li {
+  position: relative;
+  counter-increment: prose-ol;
+  margin-bottom: 0.375rem;
+}
+
+.ol .li::before {
+  content: counter(prose-ol) ".";
+  position: absolute;
+  left: -1.625rem;
+  color: #8b5cf6;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.75;
+}
+
+.li {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--foreground);
+  opacity: 0.9;
+}
+
+/* ── Table ────────────────────────────────────────────────────── */
+
+.tableWrapper {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.th {
+  padding: 0.625rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  background: var(--surface);
+  color: var(--foreground);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.td {
+  padding: 0.625rem 1rem;
+  color: var(--foreground);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+/* ── Image ────────────────────────────────────────────────────── */
+
+.figure {
+  margin: 2rem 0;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  margin: 0 auto;
+}
+
+.figcaption {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin-top: 0.625rem;
+  line-height: 1.5;
+}
+
+/* ── HR ───────────────────────────────────────────────────────── */
+
+.hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* ── Reduced motion ───────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .a,
+  .copyBtn {
+    transition: none;
+  }
+}

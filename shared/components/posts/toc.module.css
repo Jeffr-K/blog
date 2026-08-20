@@ -1,0 +1,50 @@
+.toc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.heading {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--border);
+}
+
+.item[data-level="3"] .link {
+  padding-left: 1.25rem;
+  font-size: 0.75rem;
+}
+
+.link {
+  display: block;
+  padding: 0.3rem 0.625rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-decoration: none;
+  line-height: 1.5;
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--foreground);
+}
+
+.link[aria-current="true"] {
+  color: #8b5cf6;
+  border-left-color: #8b5cf6;
+  font-weight: 600;
+}
