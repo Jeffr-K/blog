@@ -41,10 +41,6 @@ function getPostFilePath(slug: string, locale: Locale): string {
   return path.join(CONTENT_DIR, slug, `index.${locale}.md`);
 }
 
-function postExists(slug: string, locale: Locale): boolean {
-  return fs.existsSync(getPostFilePath(slug, locale));
-}
-
 /* ── getAllPostSlugs ─────────────────────────────────────────────── */
 export function getAllPostSlugs(): string[] {
   if (!fs.existsSync(CONTENT_DIR)) return [];

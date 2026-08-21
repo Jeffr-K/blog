@@ -2,6 +2,8 @@ import "server-only";
 
 import type { TechBlog } from "@/shared/data/tech-blogs";
 
+const FEED_TIMEOUT_MS = 5000;
+
 export type FeedItem = {
   id: string;
   title: string;
@@ -30,18 +32,28 @@ export async function fetchAllFeeds(blogs: TechBlog[]): Promise<FeedItem[]> {
 }
 
 async function fetchFeed(blog: TechBlog): Promise<FeedItem[]> {
-  const res = await fetch(blog.feedUrl, {
-    next: { revalidate: 3600 },
-    headers: {
-      "User-Agent": "Mozilla/5.0 (compatible; blog-aggregator/1.0; +https://anonymous.rs)",
-      Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml",
-    },
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), FEED_TIMEOUT_MS);
 
-  if (!res.ok) return [];
+  try {
+    const res = await fetch(blog.feedUrl, {
+      next: { revalidate: 3600 },
+      signal: controller.signal,
+      headers: {
+        "User-Agent": "Mozilla/5.0 (compatible; blog-aggregator/1.0; +https://anonymous.rs)",
+        Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml",
+      },
+    });
 
-  const xml = await res.text();
-  return parseXML(xml, blog);
+    if (!res.ok) return [];
+
+    const xml = await res.text();
+    return parseXML(xml, blog);
+  } catch {
+    return [];
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 function parseXML(xml: string, blog: TechBlog): FeedItem[] {

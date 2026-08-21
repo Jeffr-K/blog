@@ -43,11 +43,12 @@ export function HotArticleBanner({ articles, locale }: Props) {
   function onTouchEnd(e: React.TouchEvent) {
     if (touchStartX.current === null) return;
     const delta = e.changedTouches[0].clientX - touchStartX.current;
-    if (Math.abs(delta) > 40) delta < 0 ? next() : prev();
+    if (Math.abs(delta) > 40) {
+      if (delta < 0) next();
+      else prev();
+    }
     touchStartX.current = null;
   }
-
-  const article = articles[index];
 
   return (
     <section className={styles.section} aria-label="인기 글">
@@ -137,4 +138,3 @@ function formatDate(dateStr: string, locale: Locale): string {
   if (locale === "ja") return `${y}年${m}月${d}日`;
   return `${y}.${m}.${d}`;
 }
-
