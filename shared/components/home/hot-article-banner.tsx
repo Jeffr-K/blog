@@ -5,12 +5,13 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 
 import type { Locale } from "@/shared/i18n/config";
-import type { HotArticle } from "@/shared/data/hot-articles";
+import type { PostMeta } from "@/shared/lib/mdx";
+import { categories } from "@/shared/data/categories";
 
 import styles from "./hot-article-banner.module.css";
 
 type Props = {
-  articles: HotArticle[];
+  articles: PostMeta[];
   locale: Locale;
 };
 
@@ -35,6 +36,8 @@ export function HotArticleBanner({ articles, locale }: Props) {
     const id = setInterval(next, INTERVAL_MS);
     return () => clearInterval(id);
   }, [isPaused, next]);
+
+  if (articles.length === 0) return null;
 
   function onTouchStart(e: React.TouchEvent) {
     touchStartX.current = e.touches[0].clientX;
@@ -77,10 +80,12 @@ export function HotArticleBanner({ articles, locale }: Props) {
             {articles.map((item, i) => {
               const isVisible = i === index;
               return (
-                <div key={item.id} className={styles.slide} aria-hidden={!isVisible}>
+                <div key={item.slug} className={styles.slide} aria-hidden={!isVisible}>
                   <div className={styles.tagRow}>
                     <span className={styles.hotBadge}>HOT</span>
-                    <span className={styles.category}>{item.category}</span>
+                    <span className={styles.category}>
+                      {categories.find((category) => category.id === item.category)?.name[locale] ?? item.category}
+                    </span>
                     <span className={styles.counter}>
                       {i + 1} / {articles.length}
                     </span>
@@ -98,7 +103,7 @@ export function HotArticleBanner({ articles, locale }: Props) {
 
                   <div className={styles.metaRow}>
                     <span className={styles.metaDate}>
-                      {formatDate(item.date, locale)}
+                      {formatDate(item.datetime, locale)}
                     </span>
                     <span className={styles.metaDivider} aria-hidden="true" />
                     <span className={styles.metaRead}>
@@ -117,7 +122,7 @@ export function HotArticleBanner({ articles, locale }: Props) {
           <div className={styles.dots} role="tablist">
             {articles.map((item, i) => (
               <button
-                key={item.id}
+                key={item.slug}
                 type="button"
                 role="tab"
                 className={styles.dot}
@@ -133,7 +138,8 @@ export function HotArticleBanner({ articles, locale }: Props) {
   );
 }
 
-function formatDate(dateStr: string, locale: Locale): string {
+function formatDate(datetime: string, locale: Locale): string {
+  const dateStr = datetime.slice(0, 10);
   const [y, m, d] = dateStr.split("-");
   if (locale === "ja") return `${y}年${m}月${d}日`;
   return `${y}.${m}.${d}`;

@@ -50,7 +50,7 @@ export default async function PostDetailPage({ params }: Props) {
       <div className={styles.wrapper}>
         <div className={styles.grid}>
           <div className={styles.left}>
-            <ProfileCard />
+            <ProfileCard locale={locale} />
           </div>
           <div className={styles.center}>
             <MdxPostContent

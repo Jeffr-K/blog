@@ -1,16 +1,21 @@
+import type { Locale } from "@/shared/i18n/config";
+import { getAllPostsMeta } from "@/shared/lib/mdx";
+
 import styles from "./profile-card.module.css";
 
 const GITHUB_URL = "https://github.com/anonymous-rs";
 const LINKEDIN_URL = "https://www.linkedin.com/in/anonymous-rs";
 
-const STATS = [
-  { value: 18, label: "Posts" },
-  { value: 9,  label: "Categories" },
-];
-
 const TECH = ["Rust", "TypeScript", "Next.js", "Go"];
 
-export function ProfileCard() {
+export function ProfileCard({ locale }: { locale: Locale }) {
+  const posts = getAllPostsMeta(locale);
+  const categoryCount = new Set(posts.map((post) => post.category)).size;
+  const stats = [
+    { value: posts.length, label: locale === "ko" ? "글" : "記事" },
+    { value: categoryCount, label: locale === "ko" ? "카테고리" : "カテゴリ" },
+  ];
+
   return (
     <div className={styles.card}>
       {/* Avatar */}
@@ -27,7 +32,7 @@ export function ProfileCard() {
 
       {/* Stats */}
       <div className={styles.stats}>
-        {STATS.map((s, i) => (
+        {stats.map((s, i) => (
           <div key={s.label} className={styles.statGroup}>
             {i > 0 && <div className={styles.statDivider} />}
             <div className={styles.stat}>

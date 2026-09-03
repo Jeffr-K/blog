@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 
 import { isLocale } from "@/shared/i18n/config";
-import { getHotArticles } from "@/shared/data/hot-articles";
 import { categories } from "@/shared/data/categories";
 import { techBlogs } from "@/shared/data/tech-blogs";
 import { fetchAllFeeds } from "@/shared/lib/feed";
+import { getAllPostsMeta } from "@/shared/lib/mdx";
 import { HotArticleBanner } from "@/shared/components/home/hot-article-banner";
 import { CategoryGrid } from "@/shared/components/home/category-grid";
 import { TechFeed } from "@/shared/components/home/tech-feed";
@@ -18,7 +18,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
   if (!isLocale(locale)) notFound();
 
   const [hotArticles, feedItems] = await Promise.all([
-    Promise.resolve(getHotArticles(locale)),
+    Promise.resolve(getAllPostsMeta(locale).slice(0, 5)),
     fetchAllFeeds(techBlogs),
   ]);
 
@@ -26,7 +26,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
     <main className="site-main">
       {/* 왼쪽 여백에 고정된 프로필 카드 */}
       <div className={styles.profileSidebar}>
-        <ProfileCard />
+        <ProfileCard locale={locale} />
       </div>
 
       <div className="content-container">
