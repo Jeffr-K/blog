@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import type { FeedItem } from "@/shared/lib/feed";
 import type { TechBlog } from "@/shared/data/tech-blogs";
@@ -32,12 +32,23 @@ export function TechFeed({ items, blogs }: Props) {
     });
   }, [items, query, activeSource]);
 
-  // Reset to first page when filter changes
-  useEffect(() => { setPage(0); }, [query, activeSource]);
-
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
-  const displayed = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const currentPage = Math.min(page, totalPages - 1);
+  const displayed = filtered.slice(
+    currentPage * PAGE_SIZE,
+    (currentPage + 1) * PAGE_SIZE
+  );
   const isEmpty = displayed.length === 0;
+
+  function updateQuery(value: string) {
+    setQuery(value);
+    setPage(0);
+  }
+
+  function updateSource(sourceId: string) {
+    setActiveSource(sourceId);
+    setPage(0);
+  }
 
   return (
     <section className={styles.section}>
@@ -52,14 +63,14 @@ export function TechFeed({ items, blogs }: Props) {
             className={styles.searchInput}
             placeholder="제목, 블로그 검색..."
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => updateQuery(e.target.value)}
             aria-label="검색"
           />
           {query && (
             <button
               type="button"
               className={styles.clearBtn}
-              onClick={() => setQuery("")}
+              onClick={() => updateQuery("")}
               aria-label="검색어 지우기"
             >
               <XIcon />
@@ -73,7 +84,7 @@ export function TechFeed({ items, blogs }: Props) {
             role="tab"
             className={styles.sourceChip}
             aria-selected={activeSource === "all"}
-            onClick={() => setActiveSource("all")}
+            onClick={() => updateSource("all")}
           >
             전체
           </button>
@@ -85,7 +96,7 @@ export function TechFeed({ items, blogs }: Props) {
               className={styles.sourceChip}
               aria-selected={activeSource === blog.id}
               style={{ "--chip-color": blog.color } as React.CSSProperties}
-              onClick={() => setActiveSource(blog.id)}
+              onClick={() => updateSource(blog.id)}
             >
               {blog.name}
             </button>
@@ -132,7 +143,7 @@ export function TechFeed({ items, blogs }: Props) {
       {/* Pagination */}
       {totalPages > 1 && (
         <Pagination
-          page={page}
+          page={currentPage}
           totalPages={totalPages}
           onChange={setPage}
         />

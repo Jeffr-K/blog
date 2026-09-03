@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "reset-css";
@@ -36,11 +35,6 @@ const lineSeedSans = localFont({
       style: "normal",
     },
   ],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const dynamicParams = false;
@@ -83,7 +77,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${lineSeedSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${lineSeedSans.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body>
