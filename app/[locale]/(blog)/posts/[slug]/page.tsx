@@ -1,9 +1,9 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import type { Locale } from "@/shared/i18n/config";
 import { isLocale } from "@/shared/i18n/config";
-import { getPost, posts } from "@/shared/data/posts";
-import { PostContent } from "@/shared/components/posts/post-content";
+import { compilePost, extractHeadings, getAllPostsMeta } from "@/shared/lib/mdx";
+import { MdxPostContent } from "@/shared/components/posts/post-content";
 import { ProfileCard } from "@/shared/components/profile/profile-card";
 import { Toc } from "@/shared/components/posts/toc";
 
@@ -14,9 +14,23 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return posts.flatMap((post) =>
-    ["ko", "ja"].map((locale) => ({ locale, slug: post.slug }))
+  return (["ko", "ja"] as const).flatMap((locale) =>
+    getAllPostsMeta(locale).map((post) => ({ locale, slug: post.slug }))
   );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, slug } = await params;
+
+  if (!isLocale(locale)) notFound();
+
+  const post = await compilePost(slug, locale);
+  if (!post) notFound();
+
+  return {
+    title: post.frontmatter.title,
+    description: post.frontmatter.excerpt,
+  };
 }
 
 export default async function PostDetailPage({ params }: Props) {
@@ -24,10 +38,11 @@ export default async function PostDetailPage({ params }: Props) {
 
   if (!isLocale(locale)) notFound();
 
-  const post = getPost(slug);
+  const post = await compilePost(slug, locale);
   if (!post) notFound();
 
-  const tocLabel = (locale as Locale) === "ko" ? "목차" : "目次";
+  const headings = extractHeadings(slug, locale);
+  const tocLabel = locale === "ko" ? "목차" : "目次";
 
   return (
     <main className="site-main">
@@ -37,10 +52,15 @@ export default async function PostDetailPage({ params }: Props) {
             <ProfileCard />
           </div>
           <div className={styles.center}>
-            <PostContent post={post} locale={locale as Locale} />
+            <MdxPostContent
+              content={post.content}
+              frontmatter={post.frontmatter}
+              locale={locale}
+              readTime={post.readTime}
+            />
           </div>
           <div className={styles.right}>
-            <Toc sections={post.sections[locale as Locale]} label={tocLabel} />
+            <Toc sections={headings} label={tocLabel} />
           </div>
         </div>
       </div>

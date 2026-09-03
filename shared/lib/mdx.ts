@@ -83,6 +83,31 @@ export function getPostsByCategory(locale: Locale, category: string): PostMeta[]
   return category === "all" ? all : all.filter((p) => p.category === category);
 }
 
+export function getCategoryCount(locale: Locale): Record<string, number> {
+  const counts: Record<string, number> = { all: 0 };
+
+  getAllPostsMeta(locale).forEach((post) => {
+    counts.all += 1;
+    counts[post.category] = (counts[post.category] ?? 0) + 1;
+  });
+
+  return counts;
+}
+
+export function getAllTags(locale: Locale): { tag: string; count: number }[] {
+  const counts: Record<string, number> = {};
+
+  getAllPostsMeta(locale).forEach((post) => {
+    post.tags.forEach((tag) => {
+      counts[tag] = (counts[tag] ?? 0) + 1;
+    });
+  });
+
+  return Object.entries(counts)
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
 /* ── compilePost ─────────────────────────────────────────────────── */
 export async function compilePost(slug: string, locale: Locale) {
   const filePath = getPostFilePath(slug, locale);
@@ -115,7 +140,10 @@ export async function compilePost(slug: string, locale: Locale) {
     },
   });
 
-  const readTime = Math.ceil(readingTime(raw).minutes);
+  if (frontmatter.draft) return null;
+
+  const { content: markdownContent } = matter(raw);
+  const readTime = Math.ceil(readingTime(markdownContent).minutes);
 
   return { content, frontmatter, slug, locale, readTime };
 }

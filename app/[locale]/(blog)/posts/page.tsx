@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 
-import type { Locale } from "@/shared/i18n/config";
 import { isLocale } from "@/shared/i18n/config";
-import { getPostsByCategory } from "@/shared/data/posts";
+import { getPostsByCategory } from "@/shared/lib/mdx";
 import { PostCard } from "@/shared/components/posts/post-card";
 import { CategorySidebar } from "@/shared/components/posts/category-sidebar";
 import { TagsSidebar } from "@/shared/components/posts/tags-sidebar";
@@ -21,17 +20,17 @@ export default async function PostsPage({ params, searchParams }: Props) {
   if (!isLocale(locale)) notFound();
 
   const activeCategory = category ?? "all";
-  const filtered = getPostsByCategory(activeCategory);
+  const filtered = getPostsByCategory(locale, activeCategory);
 
-  const heading = (locale as Locale) === "ko" ? "글" : "記事";
-  const countLabel = (locale as Locale) === "ko" ? `${filtered.length}개` : `${filtered.length}件`;
+  const heading = locale === "ko" ? "글" : "記事";
+  const countLabel = locale === "ko" ? `${filtered.length}개` : `${filtered.length}件`;
 
   return (
     <main className="site-main">
       <div className={styles.wrapper}>
         <div className={styles.grid}>
           <div className={styles.left}>
-            <CategorySidebar locale={locale as Locale} activeCategory={activeCategory} />
+            <CategorySidebar locale={locale} activeCategory={activeCategory} />
           </div>
 
           <div className={styles.center}>
@@ -41,13 +40,13 @@ export default async function PostsPage({ params, searchParams }: Props) {
             </div>
             <div className={styles.list}>
               {filtered.map((post) => (
-                <PostCard key={post.id} post={post} locale={locale as Locale} />
+                <PostCard key={post.slug} post={post} locale={locale} />
               ))}
             </div>
           </div>
 
           <div className={styles.right}>
-            <TagsSidebar locale={locale as Locale} />
+            <TagsSidebar locale={locale} />
           </div>
         </div>
       </div>

@@ -2,11 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import type { PostSection } from "@/shared/data/posts";
 import styles from "./toc.module.css";
 
+type TocSection = {
+  id: string;
+  level: 2 | 3;
+  heading?: string;
+  text?: string;
+};
+
 type Props = {
-  sections: PostSection[];
+  sections: TocSection[];
   label: string;
 };
 
@@ -45,7 +51,7 @@ export function Toc({ sections, label }: Props) {
               aria-current={s.id === activeId ? "true" : undefined}
               onClick={() => setActiveId(s.id)}
             >
-              {s.heading}
+              {s.heading ?? s.text}
             </a>
           </li>
         ))}
