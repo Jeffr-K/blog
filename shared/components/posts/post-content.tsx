@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import type { Locale } from "@/shared/i18n/config";
 import type { PostFrontmatter } from "@/shared/lib/mdx";
+import { resolveAuthors } from "@/shared/data/authors";
 import { categories } from "@/shared/data/categories";
 
 import styles from "./post-content.module.css";
@@ -20,6 +21,7 @@ export function MdxPostContent({
   readTime,
 }: MdxProps) {
   const category = categories.find((c) => c.id === frontmatter.category);
+  const authorNames = resolveAuthors(frontmatter.authors, locale);
   const [y, m, d] = frontmatter.datetime.slice(0, 10).split("-");
   const dateStr = locale === "ja" ? `${y}年${m}月${d}日` : `${y}.${m}.${d}`;
 
@@ -39,6 +41,8 @@ export function MdxPostContent({
             </span>
           )}
           <span className={styles.date}>{dateStr}</span>
+          <span className={styles.dot} aria-hidden="true" />
+          <span className={styles.author}>{authorNames.join(", ")}</span>
           <span className={styles.dot} aria-hidden="true" />
           <span className={styles.readTime}>
             {readTime}

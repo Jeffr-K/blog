@@ -1,5 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 
+import { Callout } from "./callouts/callout";
+import { parseCallout } from "./callouts/parse";
 import { CopyButton } from "./copy-button";
 import styles from "./prose.module.css";
 
@@ -24,7 +26,17 @@ export const mdxComponents: MDXComponents = {
   li:         ({ children }) => <li className={styles.li}>{children}</li>,
 
   /* ── Blockquote ─────────────────────────────────────────────── */
-  blockquote: ({ children }) => <blockquote className={styles.blockquote}>{children}</blockquote>,
+  blockquote: ({ children }) => {
+    const callout = getCallout(children);
+
+    if (callout) {
+      return (
+        <Callout variant={callout.variant}>{callout.children}</Callout>
+      );
+    }
+
+    return <blockquote className={styles.blockquote}>{children}</blockquote>;
+  },
 
   /* ── Code ───────────────────────────────────────────────────── */
   code: ({ children, className }) => {
@@ -73,4 +85,8 @@ function extractCodeText(children: React.ReactNode): string {
     return extractCodeText((children as React.ReactElement<{ children?: React.ReactNode }>).props.children);
   }
   return "";
+}
+
+function getCallout(children: React.ReactNode) {
+  return parseCallout(children);
 }

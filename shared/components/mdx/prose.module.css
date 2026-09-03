@@ -21,8 +21,8 @@
   letter-spacing: -0.025em;
   line-height: 1.35;
   color: var(--foreground);
-  margin-top: 2.75rem;
-  margin-bottom: 0.875rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--border);
   scroll-margin-top: 5rem;
@@ -34,7 +34,7 @@
   letter-spacing: -0.015em;
   line-height: 1.4;
   color: var(--foreground);
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.625rem;
   padding-left: 0.875rem;
   border-left: 2.5px solid #8b5cf6;
@@ -62,10 +62,10 @@
 
 .p {
   font-size: 0.9375rem;
-  line-height: 1.85;
+  line-height: 1.8;
   color: var(--foreground);
   opacity: 0.9;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .p:last-child { margin-bottom: 0; }
@@ -109,8 +109,8 @@
 
 .blockquote {
   position: relative;
-  margin: 1.75rem 0;
-  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
   border-left: 3px solid #8b5cf6;
   background: color-mix(in srgb, #8b5cf6 6%, transparent);
   border-radius: 0 0.375rem 0.375rem 0;
@@ -128,6 +128,42 @@
 .blockquote strong {
   color: #8b5cf6;
   font-style: normal;
+}
+
+/* ── Callout ─────────────────────────────────────────────────── */
+
+.callout {
+  --callout-bg: color-mix(in srgb, var(--callout-accent) 7%, transparent);
+  position: relative;
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--callout-accent);
+  border-radius: 0 0.375rem 0.375rem 0;
+  background: var(--callout-bg);
+}
+
+.calloutTitle {
+  margin: 0 0 0.35rem;
+  color: var(--callout-accent);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.calloutBody {
+  color: var(--foreground);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.calloutBody .p {
+  margin-bottom: 0.625rem;
+}
+
+.calloutBody .p:last-child {
+  margin-bottom: 0;
 }
 
 /* ── Code (inline) ────────────────────────────────────────────── */
@@ -152,16 +188,16 @@
 
 .codeWrapper {
   position: relative;
-  margin: 1.75rem 0;
+  margin: 1.25rem 0;
 }
 
 .pre {
   overflow-x: auto;
   border-radius: 0.5rem;
   border: 1px solid var(--border);
-  font-size: 0.875rem;
-  line-height: 1.7;
-  padding: 1.25rem 1.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  padding: 1rem 1.25rem;
 }
 
 /* rehype-pretty-code: 언어 배지 */
@@ -183,10 +219,10 @@
 .pre [data-highlighted-line] {
   background: color-mix(in srgb, #8b5cf6 8%, transparent);
   border-left: 2px solid #8b5cf6;
-  margin-left: -1.5rem;
-  padding-left: calc(1.5rem - 2px);
-  margin-right: -1.5rem;
-  padding-right: 1.5rem;
+  margin-left: -1.25rem;
+  padding-left: calc(1.25rem - 2px);
+  margin-right: -1.25rem;
+  padding-right: 1.25rem;
 }
 
 /* 복사 버튼 */
