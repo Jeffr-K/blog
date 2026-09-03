@@ -6,6 +6,7 @@ import { compilePost, extractHeadings, getAllPostsMeta } from "@/shared/lib/mdx"
 import { MdxPostContent } from "@/shared/components/posts/post-content";
 import { ProfileCard } from "@/shared/components/profile/profile-card";
 import { Toc } from "@/shared/components/posts/toc";
+import { GiscusComments } from "@/shared/components/comments/giscus-comments";
 
 import styles from "./post-detail.module.css";
 
@@ -58,6 +59,7 @@ export default async function PostDetailPage({ params }: Props) {
               locale={locale}
               readTime={post.readTime}
             />
+            <GiscusComments locale={locale} />
           </div>
           <div className={styles.right}>
             <Toc sections={headings} label={tocLabel} />
