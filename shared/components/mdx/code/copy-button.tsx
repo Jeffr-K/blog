@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./prose.module.css";
+
+import { codeLabels } from "@/shared/lib/mdx/code/config";
+import styles from "../prose.module.css";
 
 export function CopyButton({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
@@ -17,7 +19,7 @@ export function CopyButton({ code }: { code: string }) {
       type="button"
       className={styles.copyBtn}
       onClick={copy}
-      aria-label={copied ? "복사됨" : "코드 복사"}
+      aria-label={copied ? codeLabels.copied : codeLabels.copy}
     >
       {copied ? <CheckIcon /> : <CopyIcon />}
     </button>

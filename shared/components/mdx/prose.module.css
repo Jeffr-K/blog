@@ -189,68 +189,190 @@
 .codeWrapper {
   position: relative;
   margin: 1.25rem 0;
-}
-
-.pre {
-  overflow-x: auto;
+  overflow: hidden;
+  border: 1px solid #3e4452;
   border-radius: 0.5rem;
-  border: 1px solid var(--border);
-  font-size: 0.8125rem;
-  line-height: 1.65;
-  padding: 1rem 1.25rem;
+  background: #282c34;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 14%);
 }
 
-/* rehype-pretty-code: 언어 배지 */
-.pre[data-language]::before {
-  content: attr(data-language);
-  position: absolute;
-  top: 0.75rem;
-  left: 1.25rem;
+.codeHeader {
+  display: flex;
+  min-height: 2.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0 0.5rem 0 1.125rem;
+  border-bottom: 1px solid #3e4452;
+  background: #21252b;
+}
+
+.codeLanguage {
+  color: #7f848e;
+  font-family: var(--font-mono), monospace;
   font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
-  font-family: var(--font-mono), monospace;
-  pointer-events: none;
+}
+
+.pre {
+  overflow-x: auto;
+  scrollbar-color: #5c6370 #21252b;
+  scrollbar-width: thin;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: #282c34;
+  color: #abb2bf;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  padding: 0.9rem 1.125rem 0.95rem;
+}
+
+.pre::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.pre::-webkit-scrollbar-track {
+  background: #21252b;
+}
+
+.pre::-webkit-scrollbar-thumb {
+  border: 2px solid #21252b;
+  border-radius: 999px;
+  background: #5c6370;
+}
+
+.pre::-webkit-scrollbar-thumb:hover {
+  background: #7f848e;
+}
+
+.pre code {
+  display: grid;
+  min-width: max-content;
+  counter-reset: code-line;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--shiki-dark, #abb2bf);
+  font-family: var(--font-mono), "SF Mono", "Fira Code", monospace;
+  font-size: inherit;
+}
+
+.pre [data-line] {
+  display: inline-block;
+  min-height: 1.65em;
+  padding-left: 3rem;
+  position: relative;
+  color: var(--shiki-dark, #abb2bf);
+}
+
+.pre [data-line] span {
+  color: var(--shiki-dark, #abb2bf);
+}
+
+.pre [data-line]::before {
+  content: counter(code-line);
+  counter-increment: code-line;
+  position: absolute;
+  left: 0;
+  width: 1.75rem;
+  color: #5c6370;
+  font-size: 0.75rem;
+  text-align: right;
+  user-select: none;
+}
+
+.pre [data-line]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2.25rem;
+  width: 1px;
+  background: #3e4452;
+  opacity: 0.55;
 }
 
 /* 줄 강조 */
 .pre [data-highlighted-line] {
-  background: color-mix(in srgb, #8b5cf6 8%, transparent);
-  border-left: 2px solid #8b5cf6;
+  background: color-mix(in srgb, #61afef 10%, transparent);
+  border-left: 2px solid #61afef;
   margin-left: -1.25rem;
-  padding-left: calc(1.25rem - 2px);
+  padding-left: calc(4.25rem - 2px);
   margin-right: -1.25rem;
   padding-right: 1.25rem;
 }
 
 /* 복사 버튼 */
 .copyBtn {
-  position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
   display: grid;
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.75rem;
+  height: 1.75rem;
   place-items: center;
-  border: 1px solid var(--border);
-  border-radius: 0.375rem;
-  background: var(--background);
-  color: var(--muted);
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: #abb2bf;
   cursor: pointer;
-  transition: color 160ms ease, background-color 160ms ease;
-  opacity: 0;
-}
-
-.codeWrapper:hover .copyBtn,
-.copyBtn:focus-visible {
-  opacity: 1;
+  transition: color 160ms ease;
 }
 
 .copyBtn:hover {
-  background: var(--surface);
-  color: var(--foreground);
+  color: #ffffff;
+}
+
+.copyBtn:focus-visible {
+  outline: 2px solid #61afef;
+  outline-offset: 2px;
+}
+
+/* ── Playground ───────────────────────────────────────────────── */
+
+.playground {
+  overflow: hidden;
+  margin: 1.25rem 0;
+  border: 1px solid #3e4452;
+  border-radius: 0.5rem;
+  background: #282c34;
+}
+
+.playgroundHeader {
+  display: flex;
+  min-height: 2.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-inline: 0.875rem;
+  border-bottom: 1px solid #3e4452;
+  background: #21252b;
+}
+
+.playgroundTitle {
+  color: #d7dae0;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.playgroundTemplate {
+  color: #7f848e;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.playgroundLayout {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.playgroundLayout :global(.sp-stack) {
+  min-height: 18rem;
 }
 
 /* ── Lists ────────────────────────────────────────────────────── */

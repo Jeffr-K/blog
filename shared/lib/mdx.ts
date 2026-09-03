@@ -13,6 +13,7 @@ import remarkGfm from "remark-gfm";
 
 import type { Locale } from "@/shared/i18n/config";
 import { mdxComponents } from "@/shared/components/mdx/mdx-components";
+import { codeTheme } from "@/shared/lib/mdx/code/config";
 
 const CONTENT_DIR = path.join(process.cwd(), "content/posts");
 
@@ -131,7 +132,7 @@ export async function compilePost(slug: string, locale: Locale) {
           [
             rehypePrettyCode,
             {
-              theme: { light: "github-light", dark: "github-dark" },
+              theme: { light: codeTheme.light, dark: codeTheme.dark },
               keepBackground: false,
             },
           ],

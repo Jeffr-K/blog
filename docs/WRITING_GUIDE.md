@@ -135,6 +135,17 @@ fn main() {
 ```
 ````
 
+### 실행형 예제 (Playground)
+
+일반 코드블럭은 정적 렌더링으로 유지하고, 실행이 필요한 예제만 `<Playground />`를 사용합니다.
+
+```mdx
+<Playground id="rust-counter" />
+```
+
+실행형 예제의 실제 파일 구성은 `shared/lib/mdx/code/playgrounds.ts`에서 관리합니다.
+코드블럭 테마와 Playground 색상은 `shared/lib/mdx/code/config.ts`에서 관리합니다.
+
 ---
 
 ### 인용문 (Blockquote)
@@ -165,7 +176,7 @@ fn main() {
 > 강하게 경고해야 하는 내용입니다.
 ```
 
-콜아웃 종류, 라벨, 색상은 `shared/components/mdx/callouts/config.ts`에서 관리합니다.
+콜아웃 종류, 라벨, 색상은 `shared/lib/mdx/callouts/config.ts`에서 관리합니다.
 
 ---
 

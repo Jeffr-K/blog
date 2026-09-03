@@ -1,11 +1,16 @@
 import type { MDXComponents } from "mdx/types";
+import type { ReactElement, ReactNode } from "react";
 
 import { Callout } from "./callouts/callout";
-import { parseCallout } from "./callouts/parse";
-import { CopyButton } from "./copy-button";
+import { CodeBlock } from "./code/code-block";
+import { InlineCode } from "./code/inline-code";
+import { Playground } from "./code/playground";
+import { parseCallout } from "@/shared/lib/mdx/callouts/parse";
 import styles from "./prose.module.css";
 
 export const mdxComponents: MDXComponents = {
+  Playground,
+
   /* ── Headings ───────────────────────────────────────────────── */
   h1: ({ children, id }) => <h1 id={id} className={styles.h1}>{children}</h1>,
   h2: ({ children, id }) => <h2 id={id} className={styles.h2}>{children}</h2>,
@@ -39,26 +44,17 @@ export const mdxComponents: MDXComponents = {
   },
 
   /* ── Code ───────────────────────────────────────────────────── */
-  code: ({ children, className }) => {
-    // inline code (no className)
-    if (!className) {
-      return <code className={styles.inlineCode}>{children}</code>;
+  code: ({ children, className, ...props }) => {
+    const isBlockCode =
+      (typeof children === "string" && children.includes("\n")) ||
+      hasCodeLines(children);
+
+    if (!className && !isBlockCode) {
+      return <InlineCode>{children}</InlineCode>;
     }
-    // code block (className = "language-xxx", handled by pre below)
-    return <code className={className}>{children}</code>;
+    return <code className={className} {...props}>{children}</code>;
   },
-  pre: ({ children, ...props }) => {
-    // Extract raw text for copy button
-    const rawCode = extractCodeText(children);
-    return (
-      <div className={styles.codeWrapper}>
-        <pre className={styles.pre} {...props}>
-          {children}
-        </pre>
-        <CopyButton code={rawCode} />
-      </div>
-    );
-  },
+  pre: ({ children, ...props }) => <CodeBlock {...props}>{children}</CodeBlock>,
 
   /* ── Table ──────────────────────────────────────────────────── */
   table:   ({ children }) => <div className={styles.tableWrapper}><table className={styles.table}>{children}</table></div>,
@@ -78,15 +74,24 @@ export const mdxComponents: MDXComponents = {
   ),
 };
 
-function extractCodeText(children: React.ReactNode): string {
-  if (typeof children === "string") return children;
-  if (Array.isArray(children)) return children.map(extractCodeText).join("");
-  if (children && typeof children === "object" && "props" in (children as object)) {
-    return extractCodeText((children as React.ReactElement<{ children?: React.ReactNode }>).props.children);
-  }
-  return "";
+function getCallout(children: ReactNode) {
+  return parseCallout(children);
 }
 
-function getCallout(children: React.ReactNode) {
-  return parseCallout(children);
+function hasCodeLines(children: ReactNode): boolean {
+  if (Array.isArray(children)) {
+    return children.some(hasCodeLines);
+  }
+
+  if (children && typeof children === "object" && "props" in children) {
+    const props = (children as ReactElement<Record<string, unknown>>).props;
+
+    if ("data-line" in props) {
+      return true;
+    }
+
+    return hasCodeLines(props.children as ReactNode);
+  }
+
+  return false;
 }

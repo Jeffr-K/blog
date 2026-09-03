@@ -66,6 +66,21 @@ axum = "0.7"
 serde = { version = "1", features = ["derive"] }
 ```
 
+긴 코드 줄은 자동으로 줄바꿈하지 않고 블럭 내부에서 좌우로 스크롤됩니다.
+
+```rust
+fn configure_server(address: &str, workers: usize, graceful_shutdown: bool, request_timeout_ms: u64) -> Result<(), Box<dyn std::error::Error>> {
+    println!("starting server at {address} with {workers} workers (timeout: {request_timeout_ms}ms, graceful: {graceful_shutdown})");
+    Ok(())
+}
+```
+
+### 실행형 예제
+
+아래 예제는 글 안에서 직접 실행할 수 있는 React TypeScript playground입니다. 일반 코드블럭과 분리해서, 필요한 글에서만 `<Playground />`를 사용합니다.
+
+<Playground id="rust-counter" />
+
 ## 언제 Rust를 선택해야 할까
 
 성능이 중요한 CLI 도구, 시스템 프로그래밍, WebAssembly, 임베디드, 네트워크 서버에서 탁월합니다. Rust는 진입 장벽이 있지만 그 투자는 분명히 회수됩니다.

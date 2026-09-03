@@ -1,6 +1,9 @@
 import type { ReactNode } from "react";
 
-import { calloutVariants, type CalloutVariant } from "./config";
+import {
+  calloutVariants,
+  type CalloutVariant,
+} from "@/shared/lib/mdx/callouts/config";
 import styles from "../prose.module.css";
 
 type Props = {
@@ -22,4 +25,3 @@ export function Callout({ variant, children }: Props) {
     </aside>
   );
 }
-
