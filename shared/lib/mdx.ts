@@ -12,6 +12,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkGfm from "remark-gfm";
 
 import type { Locale } from "@/shared/i18n/config";
+import { authors } from "@/shared/data/authors";
 import { mdxComponents } from "@/shared/components/mdx/mdx-components";
 import { codeTheme } from "@/shared/lib/mdx/code/config";
 
@@ -58,7 +59,7 @@ export function getPostMeta(slug: string, locale: Locale): PostMeta | null {
 
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(raw);
-  const fm = data as PostFrontmatter;
+  const fm = parseFrontmatter(data, filePath);
 
   if (fm.draft) return null;
 
@@ -141,12 +142,66 @@ export async function compilePost(slug: string, locale: Locale) {
     },
   });
 
-  if (frontmatter.draft) return null;
+  const validatedFrontmatter = parseFrontmatter(frontmatter, filePath);
+  if (validatedFrontmatter.draft) return null;
 
   const { content: markdownContent } = matter(raw);
   const readTime = Math.ceil(readingTime(markdownContent).minutes);
 
-  return { content, frontmatter, slug, locale, readTime };
+  return { content, frontmatter: validatedFrontmatter, slug, locale, readTime };
+}
+
+function parseFrontmatter(data: unknown, filePath: string): PostFrontmatter {
+  if (!isRecord(data)) throw new Error(`Invalid frontmatter in ${filePath}`);
+
+  const requiredStrings = ["title", "excerpt", "category", "datetime"] as const;
+  for (const field of requiredStrings) {
+    if (typeof data[field] !== "string" || !data[field].trim()) {
+      throw new Error(`Missing or invalid frontmatter field \"${field}\" in ${filePath}`);
+    }
+  }
+
+  const title = data.title as string;
+  const excerpt = data.excerpt as string;
+  const category = data.category as string;
+  const datetime = data.datetime as string;
+  const tags = data.tags as string[];
+  const authorIds = data.authors as string[];
+
+  if (!Array.isArray(data.tags) || !data.tags.every((tag) => typeof tag === "string")) {
+    throw new Error(`Invalid frontmatter field \"tags\" in ${filePath}`);
+  }
+  if (!Array.isArray(data.authors) || !data.authors.every((author) => typeof author === "string")) {
+    throw new Error(`Invalid frontmatter field \"authors\" in ${filePath}`);
+  }
+  if (data.draft !== undefined && typeof data.draft !== "boolean") {
+    throw new Error(`Invalid frontmatter field \"draft\" in ${filePath}`);
+  }
+  if (Number.isNaN(new Date(datetime).getTime())) {
+    throw new Error(`Invalid frontmatter date in ${filePath}`);
+  }
+
+  const unknownAuthors = authorIds.filter(
+    (author) => !authors.some((registered) => registered.id === author),
+  );
+  if (unknownAuthors.length > 0) {
+    throw new Error(`Unknown author ID(s) ${unknownAuthors.join(", ")} in ${filePath}`);
+  }
+
+  return {
+    title,
+    excerpt,
+    category,
+    tags,
+    authors: authorIds,
+    datetime,
+    draft: data.draft === true,
+    copyright: typeof data.copyright === "string" ? data.copyright : undefined,
+  };
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
 /* ── extractHeadings (for TOC) ───────────────────────────────────── */
