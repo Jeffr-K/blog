@@ -7,6 +7,8 @@ import { MdxPostContent } from "@/shared/components/posts/post-content";
 import { ProfileCard } from "@/shared/components/profile/profile-card";
 import { Toc } from "@/shared/components/posts/toc";
 import { GiscusComments } from "@/shared/components/comments/giscus-comments";
+import { resolveAuthors } from "@/shared/data/authors";
+import { siteConfig } from "@/shared/lib/site-config";
 
 import styles from "./post-detail.module.css";
 
@@ -28,9 +30,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await compilePost(slug, locale);
   if (!post) notFound();
 
+  const url = `${siteConfig.url}/${locale}/posts/${slug}`;
+  const authors = resolveAuthors(post.frontmatter.authors, locale);
+
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.excerpt,
+    authors: authors.map((name) => ({ name })),
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: post.frontmatter.title,
+      description: post.frontmatter.excerpt,
+      publishedTime: post.frontmatter.datetime,
+      authors,
+      tags: post.frontmatter.tags,
+      locale: locale === "ko" ? "ko_KR" : "ja_JP",
+    },
+    twitter: {
+      card: "summary",
+      title: post.frontmatter.title,
+      description: post.frontmatter.excerpt,
+    },
   };
 }
 
@@ -43,6 +65,8 @@ export default async function PostDetailPage({ params }: Props) {
   if (!post) notFound();
 
   const headings = extractHeadings(slug, locale);
+  const url = `${siteConfig.url}/${locale}/posts/${slug}`;
+  const authors = resolveAuthors(post.frontmatter.authors, locale);
   const tocLabel = locale === "ko" ? "목차" : "目次";
 
   return (
@@ -58,6 +82,21 @@ export default async function PostDetailPage({ params }: Props) {
               frontmatter={post.frontmatter}
               locale={locale}
               readTime={post.readTime}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  headline: post.frontmatter.title,
+                  description: post.frontmatter.excerpt,
+                  datePublished: post.frontmatter.datetime,
+                  author: authors.map((name) => ({ "@type": "Person", name })),
+                  mainEntityOfPage: { "@type": "WebPage", "@id": url },
+                  url,
+                }),
+              }}
             />
             <GiscusComments locale={locale} />
           </div>
