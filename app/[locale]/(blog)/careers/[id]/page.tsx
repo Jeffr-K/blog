@@ -26,7 +26,7 @@ const copy = {
     skills: "기술",
     apply: "메일로 문의",
     related: "다른 채용",
-    contactEmail: "careers@anonymous.rs",
+    contactEmail: "jeff.cofos@gmail.com",
   },
   ja: {
     back: "求人一覧",
@@ -42,7 +42,7 @@ const copy = {
     skills: "技術",
     apply: "メールで問い合わせ",
     related: "他の求人",
-    contactEmail: "careers@anonymous.rs",
+    contactEmail: "jeff.cofos@gmail.com",
   },
 } satisfies Record<Locale, Record<string, string>>;
 

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import type { Locale } from "@/shared/i18n/config";
 import { isLocale } from "@/shared/i18n/config";
-import { jobs, languageFilters, levelFilters, type Filter } from "@/shared/data/careers";
+import { getUrgentJobs, jobs, languageFilters, levelFilters, type Filter } from "@/shared/data/careers";
 
 import styles from "./careers.module.css";
 
@@ -36,7 +36,7 @@ const copy = {
     deadline: "마감",
     empty: "조건에 맞는 채용 공고가 없습니다.",
     detail: "문의",
-    contactEmail: "careers@anonymous.rs",
+    contactEmail: "jeff.cofos@gmail.com",
   },
   ja: {
     eyebrow: "Newcomer Jobs",
@@ -66,7 +66,7 @@ const copy = {
     deadline: "締切",
     empty: "条件に合う求人がありません。",
     detail: "問い合わせ",
-    contactEmail: "careers@anonymous.rs",
+    contactEmail: "jeff.cofos@gmail.com",
   },
 } satisfies Record<Locale, Record<string, string>>;
 
@@ -124,9 +124,7 @@ export default async function CareersPage({ params, searchParams }: Props) {
     return matchesLang && matchesLevel && matchesQuery && matchesLocation && matchesRole && matchesSkill;
   });
 
-  const urgentJobs = jobs
-    .filter((job) => job.deadline.ko.includes("09."))
-    .slice(0, 3);
+  const urgentJobs = getUrgentJobs();
   const suggestedSearches = [
     { label: "React", href: buildHref(locale, { skill: "React" }) },
     { label: locale === "ko" ? "원격" : "リモート", href: buildHref(locale, { location: "원격" }) },

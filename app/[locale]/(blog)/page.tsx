@@ -4,7 +4,7 @@ import { isLocale } from "@/shared/i18n/config";
 import { categories } from "@/shared/data/categories";
 import { techBlogs } from "@/shared/data/tech-blogs";
 import { getAllPostsMeta } from "@/shared/lib/mdx";
-import { fetchAllFeeds } from "@/shared/lib/feed";
+import { getCachedTechPosts } from "@/shared/lib/feed-cache";
 import { HotArticleBanner } from "@/shared/components/home/hot-article-banner";
 import { CategoryGrid } from "@/shared/components/home/category-grid";
 import { TechFeed } from "@/shared/components/home/tech-feed";
@@ -19,7 +19,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
 
   const [hotArticles, feedItems] = await Promise.all([
     Promise.resolve(getAllPostsMeta(locale).slice(0, 5)),
-    fetchAllFeeds(techBlogs),
+    Promise.resolve(getCachedTechPosts()),
   ]);
 
   return (
