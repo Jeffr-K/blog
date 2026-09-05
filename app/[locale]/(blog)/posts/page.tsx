@@ -56,17 +56,36 @@ export default async function PostsPage({ params, searchParams }: Props) {
           <div className={styles.center}>
             <form className={styles.searchForm} role="search">
               <label htmlFor="post-search" className={styles.searchLabel}>{searchLabel}</label>
-              <input
-                id="post-search"
-                name="q"
-                type="search"
-                defaultValue={searchQuery}
-                placeholder={searchPlaceholder}
-                className={styles.searchInput}
-              />
+              <div className={styles.searchShell}>
+                <SearchIcon />
+                <input
+                  id="post-search"
+                  name="q"
+                  type="search"
+                  defaultValue={searchQuery}
+                  placeholder={searchPlaceholder}
+                  className={styles.searchInput}
+                  aria-label={searchLabel}
+                />
+                {searchQuery && (
+                  <Link
+                    href={buildPostsHref(locale, activeCategory, "", 1)}
+                    className={styles.searchReset}
+                    aria-label={locale === "ko" ? "검색어 지우기" : "検索語を消去"}
+                    title={locale === "ko" ? "검색어 지우기" : "検索語を消去"}
+                  >
+                    <CloseIcon />
+                  </Link>
+                )}
+              </div>
               {activeCategory !== "all" && <input type="hidden" name="category" value={activeCategory} />}
-              <button type="submit" className={styles.searchButton}>
-                {locale === "ko" ? "검색" : "検索"}
+              <button
+                type="submit"
+                className={styles.searchButton}
+                aria-label={locale === "ko" ? "검색" : "検索"}
+                title={locale === "ko" ? "검색" : "検索"}
+              >
+                <SearchIcon />
               </button>
             </form>
             <div className={styles.listHeader}>
@@ -78,20 +97,18 @@ export default async function PostsPage({ params, searchParams }: Props) {
                 <PostCard key={post.slug} post={post} locale={locale} />
               ))}
             </div>
-            {totalPages > 1 && (
-              <nav className={styles.pagination} aria-label={locale === "ko" ? "페이지 탐색" : "ページ移動"}>
-                {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
-                  <Link
-                    key={page}
-                    href={buildPostsHref(locale, activeCategory, searchQuery, page)}
-                    className={styles.pageLink}
-                    aria-current={page === currentPage ? "page" : undefined}
-                  >
-                    {page}
-                  </Link>
-                ))}
-              </nav>
-            )}
+            <nav className={styles.pagination} aria-label={locale === "ko" ? "페이지 탐색" : "ページ移動"}>
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+                <Link
+                  key={page}
+                  href={buildPostsHref(locale, activeCategory, searchQuery, page)}
+                  className={styles.pageLink}
+                  aria-current={page === currentPage ? "page" : undefined}
+                >
+                  {page}
+                </Link>
+              ))}
+            </nav>
           </div>
 
           <div className={styles.right}>
@@ -109,4 +126,12 @@ function buildPostsHref(locale: string, category: string, query: string, page: n
   if (query) params.set("q", query);
   params.set("page", String(page));
   return `/${locale}/posts?${params.toString()}`;
+}
+
+function SearchIcon() {
+  return <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>;
+}
+
+function CloseIcon() {
+  return <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>;
 }
