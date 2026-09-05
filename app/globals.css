@@ -83,6 +83,25 @@ pre {
   overscroll-behavior-inline: contain;
 }
 
+[data-rehype-pretty-code-title] {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+[data-rehype-pretty-code-title] + div pre {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .site-main {
   width: 100%;
   min-height: calc(100svh - 3.5rem);

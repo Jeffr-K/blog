@@ -33,6 +33,9 @@ fn main() {
 
 > 처음에는 빌림 검사기와 씨름하게 됩니다. 하지만 이 제약이 결국 안전한 동시성 코드를 강제하는 설계임을 알게 됩니다.
 
+> [!info]
+> Rust의 소유권 규칙은 런타임 비용보다 컴파일 단계의 피드백을 늘리는 방향의 설계입니다.
+
 ## C/C++ 수준의 성능
 
 Rust는 **제로 비용 추상화(Zero-cost Abstraction)**를 표방합니다. 고수준 언어의 편의 기능을 사용하더라도 런타임 오버헤드가 없습니다.
@@ -62,6 +65,21 @@ tokio = { version = "1", features = ["full"] }
 axum = "0.7"
 serde = { version = "1", features = ["derive"] }
 ```
+
+긴 코드 줄은 자동으로 줄바꿈하지 않고 블럭 내부에서 좌우로 스크롤됩니다.
+
+```rust
+fn configure_server(address: &str, workers: usize, graceful_shutdown: bool, request_timeout_ms: u64) -> Result<(), Box<dyn std::error::Error>> {
+    println!("starting server at {address} with {workers} workers (timeout: {request_timeout_ms}ms, graceful: {graceful_shutdown})");
+    Ok(())
+}
+```
+
+### 실행형 예제
+
+아래 예제는 글 안에서 직접 실행할 수 있는 React TypeScript playground입니다. 일반 코드블럭과 분리해서, 필요한 글에서만 `<Playground />`를 사용합니다.
+
+<Playground id="rust-counter" />
 
 ## 언제 Rust를 선택해야 할까
 

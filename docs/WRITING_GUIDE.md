@@ -42,6 +42,8 @@ draft: false
 | `draft` | boolean | | `true`면 목록에서 숨김 (기본값: `false`) |
 | `copyright` | string | | 저작권 문구 오버라이드. 생략 시 `© 2026 anonymous.rs` |
 
+`authors`에는 표시 이름이 아니라 작성자 ID를 넣습니다. 작성자 ID와 표시 이름은 `shared/data/authors.ts`에서 관리합니다.
+
 ### 카테고리 목록
 
 | ID | 이름 |
@@ -133,6 +135,17 @@ fn main() {
 ```
 ````
 
+### 실행형 예제 (Playground)
+
+일반 코드블럭은 정적 렌더링으로 유지하고, 실행이 필요한 예제만 `<Playground />`를 사용합니다.
+
+```mdx
+<Playground id="rust-counter" />
+```
+
+실행형 예제의 실제 파일 구성은 `shared/lib/mdx/code/playgrounds.ts`에서 관리합니다.
+코드블럭 테마와 Playground 색상은 `shared/lib/mdx/code/config.ts`에서 관리합니다.
+
 ---
 
 ### 인용문 (Blockquote)
@@ -143,6 +156,27 @@ fn main() {
 
 > **Note:** `>` 뒤에 `**굵게**`를 쓰면 퍼플 강조로 표시됩니다.
 ```
+
+### 콜아웃 (Callout / Admonition)
+
+```markdown
+> [!note]
+> 일반적인 보충 설명입니다.
+
+> [!info]
+> 독자가 알아두면 좋은 정보입니다.
+
+> [!tip]
+> 바로 적용할 수 있는 팁입니다.
+
+> [!warning]
+> 주의가 필요한 내용입니다.
+
+> [!danger]
+> 강하게 경고해야 하는 내용입니다.
+```
+
+콜아웃 종류, 라벨, 색상은 `shared/lib/mdx/callouts/config.ts`에서 관리합니다.
 
 ---
 

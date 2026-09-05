@@ -3,15 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build --webpack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "crawl:tech": "tsx scripts/tech-blog-crawler.ts"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.20.0",
+    "@giscus/react": "^3.1.0",
     "gray-matter": "^4.0.3",
     "next": "16.3.1",
     "next-mdx-remote": "^6.0.0",
@@ -36,6 +39,7 @@
     "eslint-config-next": "16.3.1",
     "jsdom": "^30.0.1",
     "tailwindcss": "^4",
+    "tsx": "^4.23.13",
     "typescript": "^5",
     "vitest": "^4.1.10"
   }

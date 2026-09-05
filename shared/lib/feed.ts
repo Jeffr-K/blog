@@ -1,5 +1,3 @@
-import "server-only";
-
 import type { TechBlog } from "@/shared/data/tech-blogs";
 
 const FEED_TIMEOUT_MS = 5000;

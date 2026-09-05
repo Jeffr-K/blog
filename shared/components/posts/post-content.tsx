@@ -1,14 +1,28 @@
-import type { Post } from "@/shared/data/posts";
+import type { ReactNode } from "react";
+
 import type { Locale } from "@/shared/i18n/config";
+import type { PostFrontmatter } from "@/shared/lib/mdx";
+import { resolveAuthors } from "@/shared/data/authors";
 import { categories } from "@/shared/data/categories";
 
 import styles from "./post-content.module.css";
 
-type Props = { post: Post; locale: Locale };
+type MdxProps = {
+  content: ReactNode;
+  frontmatter: PostFrontmatter;
+  locale: Locale;
+  readTime: number;
+};
 
-export function PostContent({ post, locale }: Props) {
-  const category = categories.find((c) => c.id === post.category);
-  const [y, m, d] = post.date.split("-");
+export function MdxPostContent({
+  content,
+  frontmatter,
+  locale,
+  readTime,
+}: MdxProps) {
+  const category = categories.find((c) => c.id === frontmatter.category);
+  const authorNames = resolveAuthors(frontmatter.authors, locale);
+  const [y, m, d] = frontmatter.datetime.slice(0, 10).split("-");
   const dateStr = locale === "ja" ? `${y}年${m}月${d}日` : `${y}.${m}.${d}`;
 
   return (
@@ -28,16 +42,19 @@ export function PostContent({ post, locale }: Props) {
           )}
           <span className={styles.date}>{dateStr}</span>
           <span className={styles.dot} aria-hidden="true" />
+          <span className={styles.author}>{authorNames.join(", ")}</span>
+          <span className={styles.dot} aria-hidden="true" />
           <span className={styles.readTime}>
-            {post.readTime}{locale === "ko" ? "분 읽기" : "分"}
+            {readTime}
+            {locale === "ko" ? "분 읽기" : "分"}
           </span>
         </div>
 
-        <h1 className={styles.title}>{post.title[locale]}</h1>
-        <p className={styles.excerpt}>{post.excerpt[locale]}</p>
+        <h1 className={styles.title}>{frontmatter.title}</h1>
+        <p className={styles.excerpt}>{frontmatter.excerpt}</p>
 
         <div className={styles.tags}>
-          {post.tags.map((tag) => (
+          {frontmatter.tags.map((tag) => (
             <span key={tag} className={styles.tag}>#{tag}</span>
           ))}
         </div>
@@ -45,19 +62,7 @@ export function PostContent({ post, locale }: Props) {
 
       <hr className={styles.divider} />
 
-      <div className={styles.body}>
-        {post.sections[locale].map((section) => {
-          const Tag = section.level === 2 ? "h2" : "h3";
-          return (
-            <section key={section.id} className={styles.section}>
-              <Tag id={section.id} className={styles[`h${section.level}`]}>
-                {section.heading}
-              </Tag>
-              <p className={styles.paragraph}>{section.body}</p>
-            </section>
-          );
-        })}
-      </div>
+      <div className={styles.body}>{content}</div>
     </article>
   );
 }

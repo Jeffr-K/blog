@@ -1,0 +1,40 @@
+name: Tech Blog Crawler
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: tech-blog-crawler
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.2
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Crawl feeds
+        run: npm run crawl:tech
+
+      - name: Commit cache changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tech-posts.json
+          git diff --cached --quiet || git commit -m "chore(data): refresh tech blog cache"
+          git push

@@ -1,0 +1,515 @@
+[
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/building-sre-observer-for-alert-root-cause-analysis",
+    "title": "장애 Alert의 원인을 스스로 찾다: SRE Observer 개발기",
+    "url": "https://techblog.lycorp.co.jp/ko/building-sre-observer-for-alert-root-cause-analysis",
+    "date": "2026-09-04T01:50:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/27381",
+    "title": "AI가 분석한 리서치 결과, 어떻게 만들고 전달할까요?",
+    "url": "https://techblog.woowahan.com/27381/",
+    "date": "2026-08-31T07:02:12.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/832",
+    "title": "곧, if(kakao)26의 이야기가 시작됩니다.",
+    "url": "https://tech.kakao.com/posts/832",
+    "date": "2026-08-30T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/831",
+    "title": "같은 장애를 두 번 겪지 않기 위해, 배포 전에 리뷰합니다 — KRIS 개발기",
+    "url": "https://tech.kakao.com/posts/831",
+    "date": "2026-08-30T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/27268",
+    "title": "AI에게 만드는 법 대신 실패하는 법을 묻다: 포토그래퍼의 수천 명 동시 접속 게임 만들기",
+    "url": "https://techblog.woowahan.com/27268/",
+    "date": "2026-08-28T06:46:55.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/llm-wiki-code-driven-knowledge-ssot",
+    "title": "LLM Wiki: 코드 기준으로 자동 최신화되는 도메인 지식 SSOT 만들기",
+    "url": "https://techblog.lycorp.co.jp/ko/llm-wiki-code-driven-knowledge-ssot",
+    "date": "2026-08-28T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/830",
+    "title": "지역 AI 생태계의 새로운 가능성, 카카오 AI 돛 Summit 26을 개최합니다!",
+    "url": "https://tech.kakao.com/posts/830",
+    "date": "2026-08-26T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "nhn:https://meetup.nhncloud.com/posts/421",
+    "title": "양자 시대를 대비하는 개발자의 암호학 가이드(PQC-ML-KEM)",
+    "url": "https://meetup.nhncloud.com/posts/421",
+    "date": "2026-08-24T03:54:26.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/japanese-search-kuromoji-to-sudachi",
+    "title": "일본어 상품 검색 정확도 높이기: Elasticsearch + Kuromoji에서 OpenSearch + Sudachi로",
+    "url": "https://techblog.lycorp.co.jp/ko/japanese-search-kuromoji-to-sudachi",
+    "date": "2026-08-21T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/26876",
+    "title": "옆 팀은 AI를 어떻게 쓸까? 첫 사내 기술 콘퍼런스 우아한테크데이",
+    "url": "https://techblog.woowahan.com/26876/",
+    "date": "2026-08-20T06:00:40.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/%EB%8B%B9%EA%B7%BC%EC%9D%98-%EC%9D%B8%EC%A6%9D%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%AC%EB%9D%BC%EC%A0%B8-%EC%99%94%EC%9D%84%EA%B9%8C%EC%9A%94-a50dd4b7b44c?source=rss----4505f82a2dbd---4",
+    "title": "당근의 인증은 어떻게 달라져 왔을까요?",
+    "url": "https://medium.com/daangn/%EB%8B%B9%EA%B7%BC%EC%9D%98-%EC%9D%B8%EC%A6%9D%EC%9D%80-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%AC%EB%9D%BC%EC%A0%B8-%EC%99%94%EC%9D%84%EA%B9%8C%EC%9A%94-a50dd4b7b44c?source=rss----4505f82a2dbd---4",
+    "date": "2026-08-20T02:25:36.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/ai-agent-platform-sage-dev-log-part-1",
+    "title": "보안 업무를 위한 AI 에이전트 플랫폼 「SAGE」 개발기 1편: 판단은 사람에게 남기는 설계",
+    "url": "https://techblog.lycorp.co.jp/ko/ai-agent-platform-sage-dev-log-part-1",
+    "date": "2026-08-18T05:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/laying-the-rails-beyond-webview-why-karrot-chose-lynx-db1aa92af5e4?source=rss----4505f82a2dbd---4",
+    "title": "Laying the Rails Beyond WebView: Why Karrot Chose Lynx",
+    "url": "https://medium.com/daangn/laying-the-rails-beyond-webview-why-karrot-chose-lynx-db1aa92af5e4?source=rss----4505f82a2dbd---4",
+    "date": "2026-08-12T09:04:24.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/%EC%9B%B9%EB%B7%B0-%EB%8B%A4%EC%9D%8C%EC%9D%98-%EB%A0%88%EC%9D%BC%EC%9D%84-%EA%B9%94%EB%8B%A4-%EB%8B%B9%EA%B7%BC%EC%9D%B4-lynx%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%9C-%EC%9D%B4%EC%9C%A0-34dd50abbfb7?source=rss----4505f82a2dbd---4",
+    "title": "웹뷰 다음의 레일을 깔다: 당근이 Lynx를 선택한 이유",
+    "url": "https://medium.com/daangn/%EC%9B%B9%EB%B7%B0-%EB%8B%A4%EC%9D%8C%EC%9D%98-%EB%A0%88%EC%9D%BC%EC%9D%84-%EA%B9%94%EB%8B%A4-%EB%8B%B9%EA%B7%BC%EC%9D%B4-lynx%EB%A5%BC-%EC%84%A0%ED%83%9D%ED%95%9C-%EC%9D%B4%EC%9C%A0-34dd50abbfb7?source=rss----4505f82a2dbd---4",
+    "date": "2026-08-12T09:03:40.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "nhn:https://meetup.nhncloud.com/posts/420",
+    "title": "바겐세일은 끝난다",
+    "url": "https://meetup.nhncloud.com/posts/420",
+    "date": "2026-08-12T00:45:26.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/conditions-for-organizational-aidd-adoption",
+    "title": "개인 AI 활용의 다음 단계는 무엇인가 - LY Corporation에서 AIDD 워크숍을 통해 살펴본 AIDD 조직 도입의 조건",
+    "url": "https://techblog.lycorp.co.jp/ko/conditions-for-organizational-aidd-adoption",
+    "date": "2026-08-07T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/829",
+    "title": "개인화된 Airflow 테스트 환경 구축 및 운영 경험",
+    "url": "https://tech.kakao.com/posts/829",
+    "date": "2026-08-06T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/26777",
+    "title": "기술블로그 세 번째 책 《요즘 우아한 백엔드 개발》 출간",
+    "url": "https://techblog.woowahan.com/26777/",
+    "date": "2026-08-06T05:13:12.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/26729",
+    "title": "배포 없이 앱과 로컬 웹을 잇다",
+    "url": "https://techblog.woowahan.com/26729/",
+    "date": "2026-08-04T06:17:47.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/%EC%8B%A4%ED%97%98%EC%9D%84-%EB%8D%94-%ED%8E%B8%ED%95%98%EA%B2%8C-%EC%84%A4%EA%B3%84%ED%95%A0-%EC%88%98-%EC%9E%88%EA%B2%8C-%EB%8B%B9%EA%B7%BC-%EC%8B%A4%ED%97%98%ED%94%8C%EB%9E%AB%ED%8F%BC-%EC%9D%B4%EC%95%BC%EA%B8%B0-3fa344b4391b?source=rss----4505f82a2dbd---4",
+    "title": "실험을 더 편하게 설계할 수 있게: 당근 실험플랫폼 이야기",
+    "url": "https://medium.com/daangn/%EC%8B%A4%ED%97%98%EC%9D%84-%EB%8D%94-%ED%8E%B8%ED%95%98%EA%B2%8C-%EC%84%A4%EA%B3%84%ED%95%A0-%EC%88%98-%EC%9E%88%EA%B2%8C-%EB%8B%B9%EA%B7%BC-%EC%8B%A4%ED%97%98%ED%94%8C%EB%9E%AB%ED%8F%BC-%EC%9D%B4%EC%95%BC%EA%B8%B0-3fa344b4391b?source=rss----4505f82a2dbd---4",
+    "date": "2026-08-04T01:34:28.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/828",
+    "title": "Beyond AI That Speaks Well: Making Kanana-o Speak the Way Users Want",
+    "url": "https://tech.kakao.com/posts/828",
+    "date": "2026-08-03T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/827",
+    "title": "잘 말하는 AI를 넘어, 원하는 대로 말하는 AI로: Kanana-o 음성 생성 고도화 과정",
+    "url": "https://tech.kakao.com/posts/827",
+    "date": "2026-08-03T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "nhn:https://meetup.nhncloud.com/posts/419",
+    "title": "AI와 개발하기: 숨은 결정을 드러내기",
+    "url": "https://meetup.nhncloud.com/posts/419",
+    "date": "2026-08-02T23:51:00.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/analyzing-incident-root-causes-in-grafana-using-natural-language-with-llm-agent",
+    "title": "Grafana에서 자연어로 장애 원인을 분석하기: LLM 에이전트 기반 SRELens 개발기",
+    "url": "https://techblog.lycorp.co.jp/ko/analyzing-incident-root-causes-in-grafana-using-natural-language-with-llm-agent",
+    "date": "2026-07-31T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/android-cli-for-ai-agents-at-scale",
+    "title": "AI 에이전트를 위한 Android CLI: 대규모 모바일 개발 환경에 적용하기",
+    "url": "https://techblog.lycorp.co.jp/ko/android-cli-for-ai-agents-at-scale",
+    "date": "2026-07-30T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/26507",
+    "title": "BFF 서버에 SSE를 도입한 이유: 전시 서버의 통신 구조 재설계",
+    "url": "https://techblog.woowahan.com/26507/",
+    "date": "2026-07-28T02:00:07.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/826",
+    "title": "더 작고 강해진 Kanana SLM 개발",
+    "url": "https://tech.kakao.com/posts/826",
+    "date": "2026-07-27T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%EC%99%80-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%ED%95%9C-%ED%8C%80%EC%9C%BC%EB%A1%9C-%ED%95%A9%EC%B9%98%EB%A9%B4-%EC%96%B4%EB%96%A4-%EC%9D%BC%EC%9D%B4-%EC%9D%BC%EC%96%B4%EB%82%A0%EA%B9%8C-f8b32edb2eb1?source=rss----4505f82a2dbd---4",
+    "title": "프론트엔드와 백엔드를 한 팀으로 합치면 어떤 일이 일어날까?",
+    "url": "https://medium.com/daangn/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%EC%99%80-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%ED%95%9C-%ED%8C%80%EC%9C%BC%EB%A1%9C-%ED%95%A9%EC%B9%98%EB%A9%B4-%EC%96%B4%EB%96%A4-%EC%9D%BC%EC%9D%B4-%EC%9D%BC%EC%96%B4%EB%82%A0%EA%B9%8C-f8b32edb2eb1?source=rss----4505f82a2dbd---4",
+    "date": "2026-07-23T09:39:17.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/26624",
+    "title": "기술이 없던 곳에 기술 더하기: 사내 해커톤 플랫폼 만들기",
+    "url": "https://techblog.woowahan.com/26624/",
+    "date": "2026-07-21T07:46:26.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "nhn:https://meetup.nhncloud.com/posts/418",
+    "title": "경계가 만든 길, Load Balancer(DSR)",
+    "url": "https://meetup.nhncloud.com/posts/418",
+    "date": "2026-07-20T02:12:54.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/developing-harmfulness-detection-model-for-open-chat-metadata",
+    "title": "오픈챗 이름 및 설명 글로 유해성 판단하는 모델 개발하기",
+    "url": "https://techblog.lycorp.co.jp/ko/developing-harmfulness-detection-model-for-open-chat-metadata",
+    "date": "2026-07-16T08:50:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/26492",
+    "title": "멀티 어카운트 NACL 차단 자동화 도구 운영 및 개선 경험",
+    "url": "https://techblog.woowahan.com/26492/",
+    "date": "2026-07-16T02:00:53.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/%EC%B2%9C%EB%A7%8C-mau%EB%A5%BC-%EC%A7%80%ED%83%B1%ED%95%98%EB%8A%94-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%B4%EC%9A%94-090fb4021e20?source=rss----4505f82a2dbd---4",
+    "title": "천만 MAU를 지탱하는 커뮤니티 시스템을 소개해요",
+    "url": "https://medium.com/daangn/%EC%B2%9C%EB%A7%8C-mau%EB%A5%BC-%EC%A7%80%ED%83%B1%ED%95%98%EB%8A%94-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%B4%EC%9A%94-090fb4021e20?source=rss----4505f82a2dbd---4",
+    "date": "2026-07-14T01:34:14.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "nhn:https://meetup.nhncloud.com/posts/417",
+    "title": "AI 인프라 설계의 기술적 레퍼런스, <NHN FactoryX 기술 백서>를 소개합니다",
+    "url": "https://meetup.nhncloud.com/posts/417",
+    "date": "2026-07-13T02:57:40.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/applying-e2ee-to-apache-kafka-in-line-app",
+    "title": "초당 100만 건, LINE 앱에 Apache Kafka 종단 간 암호화 적용기",
+    "url": "https://techblog.lycorp.co.jp/ko/applying-e2ee-to-apache-kafka-in-line-app",
+    "date": "2026-07-10T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/26459",
+    "title": "AI가 내 프롬프트를 흘려듣는 이유: 원리부터 다시 본 컨텍스트 엔지니어링",
+    "url": "https://techblog.woowahan.com/26459/",
+    "date": "2026-07-07T06:00:39.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "nhn:https://meetup.nhncloud.com/posts/416",
+    "title": "Redis와 Valkey를 해킹해 보자(Feat. CVE ID)",
+    "url": "https://meetup.nhncloud.com/posts/416",
+    "date": "2026-07-06T05:15:25.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/building-group-video-calls-inside-line-app-with-ai-and-line-planet",
+    "title": "AI로 웹 엔지니어 없이 LINE 앱 안에서 그룹 영상 통화 서비스 만들기",
+    "url": "https://techblog.lycorp.co.jp/ko/building-group-video-calls-inside-line-app-with-ai-and-line-planet",
+    "date": "2026-07-02T08:45:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/%ED%98%BC%EC%9E%90-%EC%8B%9C%EC%9E%91%ED%95%B4-%EC%A0%84%EA%B5%AD-%EC%98%A4%ED%94%88%EA%B9%8C%EC%A7%80-%EB%8B%B9%EA%B7%BC-%EB%A0%88%EC%8A%A8-%EA%B3%BC%EC%99%B8-%EB%B9%8C%EB%94%A9-%EB%A1%9C%EA%B7%B8-d4e61f6ba32f?source=rss----4505f82a2dbd---4",
+    "title": "혼자 시작해 전국 오픈까지, 당근 레슨/과외 빌딩 로그",
+    "url": "https://medium.com/daangn/%ED%98%BC%EC%9E%90-%EC%8B%9C%EC%9E%91%ED%95%B4-%EC%A0%84%EA%B5%AD-%EC%98%A4%ED%94%88%EA%B9%8C%EC%A7%80-%EB%8B%B9%EA%B7%BC-%EB%A0%88%EC%8A%A8-%EA%B3%BC%EC%99%B8-%EB%B9%8C%EB%94%A9-%EB%A1%9C%EA%B7%B8-d4e61f6ba32f?source=rss----4505f82a2dbd---4",
+    "date": "2026-06-29T02:36:06.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "woowahan:https://techblog.woowahan.com/26379",
+    "title": "한 번 성공하니 다음도 쉬울 줄 알았다: 최소주문금액바 4번의 A/B실험",
+    "url": "https://techblog.woowahan.com/26379/",
+    "date": "2026-06-26T03:28:59.000Z",
+    "source": "우아한기술블로그",
+    "sourceId": "woowahan",
+    "sourceColor": "#f04452"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-10",
+    "title": "프롬프팅에서 워크플로로, AI로 프런트엔드 개발 생산성 끌어올리기",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-10",
+    "date": "2026-06-26T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-62",
+    "title": "임베딩 안정화로 검색 리랭킹의 콜드 스타트 문제를 해결하다: LINE Part Time Jobs 적용 사례",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-62",
+    "date": "2026-06-26T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-219",
+    "title": "AI 에이전트끼리 토론한다면? 멀티 에이전트 협업으로 재설계하는 개발 프로세스",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-219",
+    "date": "2026-06-25T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-223",
+    "title": "AI 시대의 개발 능력은 검증력으로 결정된다, Flava API Gateway 개발 중 배운 빠른 검증과 로컬 환경 구성 전략",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-223",
+    "date": "2026-06-25T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-59",
+    "title": "시멘틱 컨텍스트 OS 설계: 에이전트 시스템의 토큰 스터핑을 넘어",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-59",
+    "date": "2026-06-24T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-231",
+    "title": "Flava DBaaS 딥다이브: 아키텍처부터 마이그레이션, 그리고 미래까지",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-231",
+    "date": "2026-06-24T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/825",
+    "title": "개발을 넘어 AI로 사회문제를 해결하다",
+    "url": "https://tech.kakao.com/posts/825",
+    "date": "2026-06-23T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-184",
+    "title": "총 용량 1EB 초과! 서로 역사가 다른 두 HDFS를 어떻게 연결할까? 데이터 플랫폼 연계 중 직면한 과제와 설계 결정",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-184",
+    "date": "2026-06-23T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-60",
+    "title": "프롬프트 튜닝을 수작업에서 AI 튜닝으로: 유전 알고리즘 기반 자동 최적화와 고속화",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-60",
+    "date": "2026-06-23T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-86",
+    "title": "코드형 인프라(IaC)로 자동화에서 AI까지: OpenTofu와 ChatOps 도입기",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-86",
+    "date": "2026-06-22T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-105",
+    "title": "분석 에이전트의 힘으로 분석을 하나로 연결하다! 전문 조직에서 도전하는 생성 AI 시대의 업무 혁신과 역할 전환",
+    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-105",
+    "date": "2026-06-22T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/id-jag-the-hard-way-learning-ai-agent-authz-through-failure",
+    "title": "ID-JAG The Hard Way: 실패로 배우는 AI 에이전트 보안 핸즈온",
+    "url": "https://techblog.lycorp.co.jp/ko/id-jag-the-hard-way-learning-ai-agent-authz-through-failure",
+    "date": "2026-06-17T03:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/824",
+    "title": "AI 에이전트로 카카오톡 추천 지표 분석 자동화하기",
+    "url": "https://tech.kakao.com/posts/824",
+    "date": "2026-06-15T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/823",
+    "title": "Vibe Coding하는 비개발자는 개발자인가(3)",
+    "url": "https://tech.kakao.com/posts/823",
+    "date": "2026-06-15T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8C%80%EC%9D%80-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C%EB%A7%8C-%EC%9E%98-%EB%A7%8C%EB%93%A4%EB%A9%B4-%EB%90%A0%EA%B9%8C-4f6f2478a8db?source=rss----4505f82a2dbd---4",
+    "title": "디자인 시스템 팀은 디자인 시스템만 잘 만들면 될까",
+    "url": "https://medium.com/daangn/%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8C%80%EC%9D%80-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C%EB%A7%8C-%EC%9E%98-%EB%A7%8C%EB%93%A4%EB%A9%B4-%EB%90%A0%EA%B9%8C-4f6f2478a8db?source=rss----4505f82a2dbd---4",
+    "date": "2026-06-11T09:32:10.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "nhn:https://meetup.nhncloud.com/posts/415",
+    "title": "운영하지 않는 Kafka, EasyQueue를 소개합니다",
+    "url": "https://meetup.nhncloud.com/posts/415",
+    "date": "2026-06-11T01:46:39.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
+    "id": "line:https://techblog.lycorp.co.jp/ko/legacy-to-ai-driven-project-ax-roadmap",
+    "title": "레거시 프로젝트에서 AI 드리븐 프로젝트로 전환, AX 로드맵",
+    "url": "https://techblog.lycorp.co.jp/ko/legacy-to-ai-driven-project-ax-roadmap",
+    "date": "2026-06-10T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  }
+]

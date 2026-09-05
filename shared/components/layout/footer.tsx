@@ -1,3 +1,7 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 import { DEFAULT_COPYRIGHT } from "@/shared/config/site";
 
 import styles from "./footer.module.css";
@@ -12,30 +16,37 @@ type Props = {
 
 export function Footer({ copyright }: Props) {
   const copy = copyright ?? DEFAULT_COPYRIGHT;
+  const pathname = usePathname();
+  const isPostDetail = /^\/(?:ko|ja)\/posts\/[^/]+$/.test(pathname);
 
   return (
     <footer className={styles.footer}>
-      <div className={`content-container ${styles.inner}`}>
-        <p className={styles.copy}>{copy}</p>
-        <div className={styles.links}>
-          <a
-            href={GITHUB_URL}
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <GitHubIcon />
-          </a>
-          <a
-            href={LINKEDIN_URL}
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <LinkedInIcon />
-          </a>
+      <div
+        className={`content-container ${styles.inner}`}
+        data-post-detail={isPostDetail || undefined}
+      >
+        <div className={styles.content}>
+          <p className={styles.copy}>{copy}</p>
+          <div className={styles.links}>
+            <a
+              href={GITHUB_URL}
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <LinkedInIcon />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

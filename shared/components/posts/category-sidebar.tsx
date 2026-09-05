@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import type { Locale } from "@/shared/i18n/config";
 import { categories } from "@/shared/data/categories";
-import { getCategoryCount } from "@/shared/data/posts";
+import { getCategoryCount } from "@/shared/lib/mdx";
 
 import styles from "./category-sidebar.module.css";
 
@@ -12,7 +12,7 @@ type Props = {
 };
 
 export function CategorySidebar({ locale, activeCategory = "all" }: Props) {
-  const counts = getCategoryCount();
+  const counts = getCategoryCount(locale);
   const heading = locale === "ko" ? "카테고리" : "カテゴリー";
   const allLabel = locale === "ko" ? "전체 글" : "すべて";
 

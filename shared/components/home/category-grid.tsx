@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import type { Locale } from "@/shared/i18n/config";
 import type { Category } from "@/shared/data/categories";
+import { getCategoryCount } from "@/shared/lib/mdx";
 
 import styles from "./category-grid.module.css";
 
@@ -11,6 +12,8 @@ type Props = {
 };
 
 export function CategoryGrid({ categories, locale }: Props) {
+  const counts = getCategoryCount(locale);
+
   return (
     <section className={styles.section} aria-label={locale === "ko" ? "카테고리" : "カテゴリー"}>
       <h2 className={styles.heading}>
@@ -32,7 +35,7 @@ export function CategoryGrid({ categories, locale }: Props) {
               <span className={styles.desc}>{category.description[locale]}</span>
             </div>
             <span className={styles.count}>
-              {category.count}
+              {counts[category.id] ?? 0}
               {locale === "ko" ? "개" : "件"}
             </span>
           </Link>

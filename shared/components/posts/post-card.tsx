@@ -1,16 +1,16 @@
 import Link from "next/link";
 
-import type { Post } from "@/shared/data/posts";
 import type { Locale } from "@/shared/i18n/config";
+import type { PostMeta } from "@/shared/lib/mdx";
 import { categories } from "@/shared/data/categories";
 
 import styles from "./post-card.module.css";
 
-type Props = { post: Post; locale: Locale };
+type Props = { post: PostMeta; locale: Locale };
 
 export function PostCard({ post, locale }: Props) {
   const category = categories.find((c) => c.id === post.category);
-  const [y, m, d] = post.date.split("-");
+  const [y, m, d] = post.datetime.slice(0, 10).split("-");
   const dateStr = locale === "ja" ? `${y}年${m}月${d}日` : `${y}.${m}.${d}`;
 
   return (
@@ -35,10 +35,10 @@ export function PostCard({ post, locale }: Props) {
       </div>
 
       <Link href={`/${locale}/posts/${post.slug}`} className={styles.titleLink}>
-        <h2 className={styles.title}>{post.title[locale]}</h2>
+        <h2 className={styles.title}>{post.title}</h2>
       </Link>
 
-      <p className={styles.excerpt}>{post.excerpt[locale]}</p>
+      <p className={styles.excerpt}>{post.excerpt}</p>
 
       <div className={styles.tags}>
         {post.tags.slice(0, 4).map((tag) => (
