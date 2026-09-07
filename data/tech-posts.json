@@ -1,5 +1,14 @@
 [
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/834",
+    "title": "카카오, if(kakao)26 컨퍼런스 개최... 모든 연결에 지능을",
+    "url": "https://tech.kakao.com/posts/834",
+    "date": "2026-09-06T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "line:https://techblog.lycorp.co.jp/ko/building-sre-observer-for-alert-root-cause-analysis",
     "title": "장애 Alert의 원인을 스스로 찾다: SRE Observer 개발기",
     "url": "https://techblog.lycorp.co.jp/ko/building-sre-observer-for-alert-root-cause-analysis",
