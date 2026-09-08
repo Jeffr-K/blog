@@ -511,14 +511,5 @@
     "source": "NHN Cloud",
     "sourceId": "nhn",
     "sourceColor": "#00a0e8"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/legacy-to-ai-driven-project-ax-roadmap",
-    "title": "레거시 프로젝트에서 AI 드리븐 프로젝트로 전환, AX 로드맵",
-    "url": "https://techblog.lycorp.co.jp/ko/legacy-to-ai-driven-project-ax-roadmap",
-    "date": "2026-06-10T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
