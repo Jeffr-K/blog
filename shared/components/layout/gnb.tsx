@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -49,7 +50,15 @@ export function Gnb({ locale, navigation, language }: GnbProps) {
           aria-label={navigation.home}
           onClick={() => setIsMenuOpen(false)}
         >
-          <span className={styles.brandMark} aria-hidden="true">~</span>
+          <span className={styles.brandMark}>
+            <Image
+              src="/images/anonymous-profile.jpg"
+              alt=""
+              width={28}
+              height={28}
+              priority
+            />
+          </span>
           <span>anonymous.rs</span>
         </Link>
 

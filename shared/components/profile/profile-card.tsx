@@ -1,5 +1,6 @@
 import type { Locale } from "@/shared/i18n/config";
 import { getAllPostsMeta } from "@/shared/lib/mdx";
+import Image from "next/image";
 
 import styles from "./profile-card.module.css";
 
@@ -20,7 +21,15 @@ export function ProfileCard({ locale }: { locale: Locale }) {
     <div className={styles.card}>
       {/* Avatar */}
       <div className={styles.avatarWrap}>
-        <div className={styles.avatar} aria-hidden="true">~</div>
+        <div className={styles.avatar}>
+          <Image
+            src="/images/anonymous-profile.jpg"
+            alt="anonymous.rs 프로필 이미지"
+            width={80}
+            height={80}
+            priority
+          />
+        </div>
         <div className={styles.onlineDot} aria-hidden="true" />
       </div>
 
