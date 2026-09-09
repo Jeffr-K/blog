@@ -511,14 +511,5 @@
     "source": "당근 Tech",
     "sourceId": "daangn",
     "sourceColor": "#ff6f0f"
-  },
-  {
-    "id": "nhn:https://meetup.nhncloud.com/posts/415",
-    "title": "운영하지 않는 Kafka, EasyQueue를 소개합니다",
-    "url": "https://meetup.nhncloud.com/posts/415",
-    "date": "2026-06-11T01:46:39.000Z",
-    "source": "NHN Cloud",
-    "sourceId": "nhn",
-    "sourceColor": "#00a0e8"
   }
 ]
