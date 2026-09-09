@@ -9,6 +9,15 @@
     "sourceColor": "#f9e000"
   },
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/835",
+    "title": "if(kakao)2026 둘째 날, 기술 세션 소개",
+    "url": "https://tech.kakao.com/posts/835",
+    "date": "2026-09-07T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "kakao-tech:https://tech.kakao.com/posts/834",
     "title": "카카오, if(kakao)26 컨퍼런스 개최... 모든 연결에 지능을",
     "url": "https://tech.kakao.com/posts/834",
@@ -502,14 +511,5 @@
     "source": "Kakao Tech",
     "sourceId": "kakao-tech",
     "sourceColor": "#f9e000"
-  },
-  {
-    "id": "daangn:https://medium.com/daangn/%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8C%80%EC%9D%80-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C%EB%A7%8C-%EC%9E%98-%EB%A7%8C%EB%93%A4%EB%A9%B4-%EB%90%A0%EA%B9%8C-4f6f2478a8db?source=rss----4505f82a2dbd---4",
-    "title": "디자인 시스템 팀은 디자인 시스템만 잘 만들면 될까",
-    "url": "https://medium.com/daangn/%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8C%80%EC%9D%80-%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%9C%EC%8A%A4%ED%85%9C%EB%A7%8C-%EC%9E%98-%EB%A7%8C%EB%93%A4%EB%A9%B4-%EB%90%A0%EA%B9%8C-4f6f2478a8db?source=rss----4505f82a2dbd---4",
-    "date": "2026-06-11T09:32:10.000Z",
-    "source": "당근 Tech",
-    "sourceId": "daangn",
-    "sourceColor": "#ff6f0f"
   }
 ]
