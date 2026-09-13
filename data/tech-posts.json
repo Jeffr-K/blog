@@ -502,23 +502,5 @@
     "source": "LINE Engineering",
     "sourceId": "line",
     "sourceColor": "#00b300"
-  },
-  {
-    "id": "kakao-tech:https://tech.kakao.com/posts/824",
-    "title": "AI 에이전트로 카카오톡 추천 지표 분석 자동화하기",
-    "url": "https://tech.kakao.com/posts/824",
-    "date": "2026-06-15T15:00:00.000Z",
-    "source": "Kakao Tech",
-    "sourceId": "kakao-tech",
-    "sourceColor": "#f9e000"
-  },
-  {
-    "id": "kakao-tech:https://tech.kakao.com/posts/823",
-    "title": "Vibe Coding하는 비개발자는 개발자인가(3)",
-    "url": "https://tech.kakao.com/posts/823",
-    "date": "2026-06-15T15:00:00.000Z",
-    "source": "Kakao Tech",
-    "sourceId": "kakao-tech",
-    "sourceColor": "#f9e000"
   }
 ]
