@@ -1,5 +1,14 @@
 [
   {
+    "id": "line:https://techblog.lycorp.co.jp/ko/ai-agent-ad-report-automation",
+    "title": "LLM에게 어디까지 맡길 것인가: AI 에이전트 기반 광고 분석 리포트 자동화",
+    "url": "https://techblog.lycorp.co.jp/ko/ai-agent-ad-report-automation",
+    "date": "2026-09-18T01:50:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
     "id": "nhn:https://meetup.nhncloud.com/posts/422",
     "title": "AI 번역의 시대1: 세태(世態)",
     "url": "https://meetup.nhncloud.com/posts/422",
