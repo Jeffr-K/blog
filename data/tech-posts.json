@@ -502,23 +502,5 @@
     "source": "LINE Engineering",
     "sourceId": "line",
     "sourceColor": "#00b300"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-86",
-    "title": "코드형 인프라(IaC)로 자동화에서 AI까지: OpenTofu와 ChatOps 도입기",
-    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-86",
-    "date": "2026-06-22T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-105",
-    "title": "분석 에이전트의 힘으로 분석을 하나로 연결하다! 전문 조직에서 도전하는 생성 AI 시대의 업무 혁신과 역할 전환",
-    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-105",
-    "date": "2026-06-22T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
