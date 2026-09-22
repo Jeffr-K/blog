@@ -457,23 +457,5 @@
     "source": "LINE Engineering",
     "sourceId": "line",
     "sourceColor": "#00b300"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-59",
-    "title": "시멘틱 컨텍스트 OS 설계: 에이전트 시스템의 토큰 스터핑을 넘어",
-    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-59",
-    "date": "2026-06-24T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-231",
-    "title": "Flava DBaaS 딥다이브: 아키텍처부터 마이그레이션, 그리고 미래까지",
-    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-231",
-    "date": "2026-06-24T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
