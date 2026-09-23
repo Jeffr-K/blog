@@ -439,23 +439,5 @@
     "source": "LINE Engineering",
     "sourceId": "line",
     "sourceColor": "#00b300"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-219",
-    "title": "AI 에이전트끼리 토론한다면? 멀티 에이전트 협업으로 재설계하는 개발 프로세스",
-    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-219",
-    "date": "2026-06-25T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-223",
-    "title": "AI 시대의 개발 능력은 검증력으로 결정된다, Flava API Gateway 개발 중 배운 빠른 검증과 로컬 환경 구성 전략",
-    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-223",
-    "date": "2026-06-25T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
