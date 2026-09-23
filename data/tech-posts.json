@@ -1,5 +1,14 @@
 [
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/837",
+    "title": "개인화 추천을 위한 랭킹 모델 개발기",
+    "url": "https://tech.kakao.com/posts/837",
+    "date": "2026-09-22T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "line:https://techblog.lycorp.co.jp/ko/ai-agent-ad-report-automation",
     "title": "LLM에게 어디까지 맡길 것인가: AI 에이전트 기반 광고 분석 리포트 자동화",
     "url": "https://techblog.lycorp.co.jp/ko/ai-agent-ad-report-automation",
