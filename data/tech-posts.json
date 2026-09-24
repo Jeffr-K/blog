@@ -421,32 +421,5 @@
     "source": "당근 Tech",
     "sourceId": "daangn",
     "sourceColor": "#ff6f0f"
-  },
-  {
-    "id": "woowahan:https://techblog.woowahan.com/26379",
-    "title": "한 번 성공하니 다음도 쉬울 줄 알았다: 최소주문금액바 4번의 A/B실험",
-    "url": "https://techblog.woowahan.com/26379/",
-    "date": "2026-06-26T03:28:59.000Z",
-    "source": "우아한기술블로그",
-    "sourceId": "woowahan",
-    "sourceColor": "#f04452"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-10",
-    "title": "프롬프팅에서 워크플로로, AI로 프런트엔드 개발 생산성 끌어올리기",
-    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-10",
-    "date": "2026-06-26T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/techverse2026-62",
-    "title": "임베딩 안정화로 검색 리랭킹의 콜드 스타트 문제를 해결하다: LINE Part Time Jobs 적용 사례",
-    "url": "https://techblog.lycorp.co.jp/ko/techverse2026-62",
-    "date": "2026-06-26T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
