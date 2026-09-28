@@ -1,5 +1,14 @@
 [
   {
+    "id": "nhn:https://meetup.nhncloud.com/posts/423",
+    "title": "나는 하네스 깎는 노인이 되었다 시리즈 1: 은총알은 없다",
+    "url": "https://meetup.nhncloud.com/posts/423",
+    "date": "2026-09-27T23:07:37.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
     "id": "kakao-tech:https://tech.kakao.com/posts/837",
     "title": "개인화 추천을 위한 랭킹 모델 개발기",
     "url": "https://tech.kakao.com/posts/837",
