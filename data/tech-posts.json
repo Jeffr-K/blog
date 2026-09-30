@@ -421,14 +421,5 @@
     "source": "NHN Cloud",
     "sourceId": "nhn",
     "sourceColor": "#00a0e8"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/building-group-video-calls-inside-line-app-with-ai-and-line-planet",
-    "title": "AI로 웹 엔지니어 없이 LINE 앱 안에서 그룹 영상 통화 서비스 만들기",
-    "url": "https://techblog.lycorp.co.jp/ko/building-group-video-calls-inside-line-app-with-ai-and-line-planet",
-    "date": "2026-07-02T08:45:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
