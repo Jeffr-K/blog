@@ -430,14 +430,5 @@
     "source": "우아한기술블로그",
     "sourceId": "woowahan",
     "sourceColor": "#f04452"
-  },
-  {
-    "id": "nhn:https://meetup.nhncloud.com/posts/416",
-    "title": "Redis와 Valkey를 해킹해 보자(Feat. CVE ID)",
-    "url": "https://meetup.nhncloud.com/posts/416",
-    "date": "2026-07-06T05:15:25.000Z",
-    "source": "NHN Cloud",
-    "sourceId": "nhn",
-    "sourceColor": "#00a0e8"
   }
 ]
