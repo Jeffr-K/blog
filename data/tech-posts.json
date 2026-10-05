@@ -421,14 +421,5 @@
     "source": "LINE Engineering",
     "sourceId": "line",
     "sourceColor": "#00b300"
-  },
-  {
-    "id": "woowahan:https://techblog.woowahan.com/26459",
-    "title": "AI가 내 프롬프트를 흘려듣는 이유: 원리부터 다시 본 컨텍스트 엔지니어링",
-    "url": "https://techblog.woowahan.com/26459/",
-    "date": "2026-07-07T06:00:39.000Z",
-    "source": "우아한기술블로그",
-    "sourceId": "woowahan",
-    "sourceColor": "#f04452"
   }
 ]
