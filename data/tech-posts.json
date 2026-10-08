@@ -1,5 +1,14 @@
 [
   {
+    "id": "nhn:https://meetup.nhncloud.com/posts/424",
+    "title": "AI 학습부터 GPU 운영까지 한 곳에서, GPU Live",
+    "url": "https://meetup.nhncloud.com/posts/424",
+    "date": "2026-10-08T00:36:39.000Z",
+    "source": "NHN Cloud",
+    "sourceId": "nhn",
+    "sourceColor": "#00a0e8"
+  },
+  {
     "id": "daangn:https://medium.com/daangn/aurora-mysql-%EC%9D%B8%EB%8D%B1%EC%8A%A4-ddl%EC%9D%B4-reader-%EB%B2%84%ED%8D%BC%ED%92%80%EC%9D%84-%EB%B9%84%EC%9A%B4%EB%8B%A4-16c6328dea50?source=rss----4505f82a2dbd---4",
     "title": "Aurora MySQL 인덱스 DDL이 Reader 버퍼풀을 비운다?",
     "url": "https://medium.com/daangn/aurora-mysql-%EC%9D%B8%EB%8D%B1%EC%8A%A4-ddl%EC%9D%B4-reader-%EB%B2%84%ED%8D%BC%ED%92%80%EC%9D%84-%EB%B9%84%EC%9A%B4%EB%8B%A4-16c6328dea50?source=rss----4505f82a2dbd---4",
@@ -430,14 +439,5 @@
     "source": "NHN Cloud",
     "sourceId": "nhn",
     "sourceColor": "#00a0e8"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/applying-e2ee-to-apache-kafka-in-line-app",
-    "title": "초당 100만 건, LINE 앱에 Apache Kafka 종단 간 암호화 적용기",
-    "url": "https://techblog.lycorp.co.jp/ko/applying-e2ee-to-apache-kafka-in-line-app",
-    "date": "2026-07-10T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
