@@ -430,14 +430,5 @@
     "source": "당근 Tech",
     "sourceId": "daangn",
     "sourceColor": "#ff6f0f"
-  },
-  {
-    "id": "nhn:https://meetup.nhncloud.com/posts/417",
-    "title": "AI 인프라 설계의 기술적 레퍼런스, <NHN FactoryX 기술 백서>를 소개합니다",
-    "url": "https://meetup.nhncloud.com/posts/417",
-    "date": "2026-07-13T02:57:40.000Z",
-    "source": "NHN Cloud",
-    "sourceId": "nhn",
-    "sourceColor": "#00a0e8"
   }
 ]
