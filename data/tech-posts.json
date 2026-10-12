@@ -9,6 +9,15 @@
     "sourceColor": "#00a0e8"
   },
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/839",
+    "title": "if(kakao)26, 온라인 라이브로 함께해요!",
+    "url": "https://tech.kakao.com/posts/839",
+    "date": "2026-10-11T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "nhn:https://meetup.nhncloud.com/posts/424",
     "title": "AI 학습부터 GPU 운영까지 한 곳에서, GPU Live",
     "url": "https://meetup.nhncloud.com/posts/424",
