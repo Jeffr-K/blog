@@ -421,14 +421,5 @@
     "source": "NHN Cloud",
     "sourceId": "nhn",
     "sourceColor": "#00a0e8"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/developing-harmfulness-detection-model-for-open-chat-metadata",
-    "title": "오픈챗 이름 및 설명 글로 유해성 판단하는 모델 개발하기",
-    "url": "https://techblog.lycorp.co.jp/ko/developing-harmfulness-detection-model-for-open-chat-metadata",
-    "date": "2026-07-16T08:50:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
