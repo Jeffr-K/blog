@@ -421,14 +421,5 @@
     "source": "우아한기술블로그",
     "sourceId": "woowahan",
     "sourceColor": "#f04452"
-  },
-  {
-    "id": "nhn:https://meetup.nhncloud.com/posts/418",
-    "title": "경계가 만든 길, Load Balancer(DSR)",
-    "url": "https://meetup.nhncloud.com/posts/418",
-    "date": "2026-07-20T02:12:54.000Z",
-    "source": "NHN Cloud",
-    "sourceId": "nhn",
-    "sourceColor": "#00a0e8"
   }
 ]
