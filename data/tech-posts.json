@@ -412,14 +412,5 @@
     "source": "당근 Tech",
     "sourceId": "daangn",
     "sourceColor": "#ff6f0f"
-  },
-  {
-    "id": "woowahan:https://techblog.woowahan.com/26624",
-    "title": "기술이 없던 곳에 기술 더하기: 사내 해커톤 플랫폼 만들기",
-    "url": "https://techblog.woowahan.com/26624/",
-    "date": "2026-07-21T07:46:26.000Z",
-    "source": "우아한기술블로그",
-    "sourceId": "woowahan",
-    "sourceColor": "#f04452"
   }
 ]
