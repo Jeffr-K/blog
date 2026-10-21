@@ -1,5 +1,14 @@
 [
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/840",
+    "title": "글로벌 최고 수준의 자체 비전 인코더, Kanana-2-vision-encoder 개발기",
+    "url": "https://tech.kakao.com/posts/840",
+    "date": "2026-10-20T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "nhn:https://meetup.nhncloud.com/posts/426",
     "title": "나는 하네스 깎는 노인이 되었다 시리즈 2: 안녕, 실버불릿",
     "url": "https://meetup.nhncloud.com/posts/426",
