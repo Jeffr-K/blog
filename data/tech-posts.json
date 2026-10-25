@@ -430,14 +430,5 @@
     "source": "우아한기술블로그",
     "sourceId": "woowahan",
     "sourceColor": "#f04452"
-  },
-  {
-    "id": "kakao-tech:https://tech.kakao.com/posts/826",
-    "title": "더 작고 강해진 Kanana SLM 개발",
-    "url": "https://tech.kakao.com/posts/826",
-    "date": "2026-07-27T15:00:00.000Z",
-    "source": "Kakao Tech",
-    "sourceId": "kakao-tech",
-    "sourceColor": "#f9e000"
   }
 ]
