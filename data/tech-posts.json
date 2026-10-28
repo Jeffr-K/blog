@@ -1,5 +1,14 @@
 [
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/844",
+    "title": "팀이 신뢰할 수 있는 AI 분석 환경 만들기: 추천팀의 컨텍스트 설계",
+    "url": "https://tech.kakao.com/posts/844",
+    "date": "2026-10-27T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "line:https://techblog.lycorp.co.jp/ko/flava-mcp-hub-ai-infrastructure",
     "title": "Flava MCP Hub가 걸어온 길: AI 시대를 위한 배관 공사",
     "url": "https://techblog.lycorp.co.jp/ko/flava-mcp-hub-ai-infrastructure",
@@ -427,15 +436,6 @@
     "title": "Grafana에서 자연어로 장애 원인을 분석하기: LLM 에이전트 기반 SRELens 개발기",
     "url": "https://techblog.lycorp.co.jp/ko/analyzing-incident-root-causes-in-grafana-using-natural-language-with-llm-agent",
     "date": "2026-07-31T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/android-cli-for-ai-agents-at-scale",
-    "title": "AI 에이전트를 위한 Android CLI: 대규모 모바일 개발 환경에 적용하기",
-    "url": "https://techblog.lycorp.co.jp/ko/android-cli-for-ai-agents-at-scale",
-    "date": "2026-07-30T02:00:00.000Z",
     "source": "LINE Engineering",
     "sourceId": "line",
     "sourceColor": "#00b300"
