@@ -421,14 +421,5 @@
     "source": "Kakao Tech",
     "sourceId": "kakao-tech",
     "sourceColor": "#f9e000"
-  },
-  {
-    "id": "nhn:https://meetup.nhncloud.com/posts/419",
-    "title": "AI와 개발하기: 숨은 결정을 드러내기",
-    "url": "https://meetup.nhncloud.com/posts/419",
-    "date": "2026-08-02T23:51:00.000Z",
-    "source": "NHN Cloud",
-    "sourceId": "nhn",
-    "sourceColor": "#00a0e8"
   }
 ]
