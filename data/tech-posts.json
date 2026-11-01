@@ -403,23 +403,5 @@
     "source": "당근 Tech",
     "sourceId": "daangn",
     "sourceColor": "#ff6f0f"
-  },
-  {
-    "id": "kakao-tech:https://tech.kakao.com/posts/828",
-    "title": "Beyond AI That Speaks Well: Making Kanana-o Speak the Way Users Want",
-    "url": "https://tech.kakao.com/posts/828",
-    "date": "2026-08-03T15:00:00.000Z",
-    "source": "Kakao Tech",
-    "sourceId": "kakao-tech",
-    "sourceColor": "#f9e000"
-  },
-  {
-    "id": "kakao-tech:https://tech.kakao.com/posts/827",
-    "title": "잘 말하는 AI를 넘어, 원하는 대로 말하는 AI로: Kanana-o 음성 생성 고도화 과정",
-    "url": "https://tech.kakao.com/posts/827",
-    "date": "2026-08-03T15:00:00.000Z",
-    "source": "Kakao Tech",
-    "sourceId": "kakao-tech",
-    "sourceColor": "#f9e000"
   }
 ]
