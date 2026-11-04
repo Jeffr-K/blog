@@ -385,14 +385,5 @@
     "source": "LINE Engineering",
     "sourceId": "line",
     "sourceColor": "#00b300"
-  },
-  {
-    "id": "kakao-tech:https://tech.kakao.com/posts/829",
-    "title": "개인화된 Airflow 테스트 환경 구축 및 운영 경험",
-    "url": "https://tech.kakao.com/posts/829",
-    "date": "2026-08-06T15:00:00.000Z",
-    "source": "Kakao Tech",
-    "sourceId": "kakao-tech",
-    "sourceColor": "#f9e000"
   }
 ]
