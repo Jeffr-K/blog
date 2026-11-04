@@ -394,14 +394,5 @@
     "source": "Kakao Tech",
     "sourceId": "kakao-tech",
     "sourceColor": "#f9e000"
-  },
-  {
-    "id": "woowahan:https://techblog.woowahan.com/26777",
-    "title": "기술블로그 세 번째 책 《요즘 우아한 백엔드 개발》 출간",
-    "url": "https://techblog.woowahan.com/26777/",
-    "date": "2026-08-06T05:13:12.000Z",
-    "source": "우아한기술블로그",
-    "sourceId": "woowahan",
-    "sourceColor": "#f04452"
   }
 ]
