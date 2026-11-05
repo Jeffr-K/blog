@@ -376,14 +376,5 @@
     "source": "NHN Cloud",
     "sourceId": "nhn",
     "sourceColor": "#00a0e8"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/conditions-for-organizational-aidd-adoption",
-    "title": "개인 AI 활용의 다음 단계는 무엇인가 - LY Corporation에서 AIDD 워크숍을 통해 살펴본 AIDD 조직 도입의 조건",
-    "url": "https://techblog.lycorp.co.jp/ko/conditions-for-organizational-aidd-adoption",
-    "date": "2026-08-07T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
