@@ -1,5 +1,23 @@
 [
   {
+    "id": "line:https://techblog.lycorp.co.jp/ko/line-premium-call-recording",
+    "title": "녹화 버튼 뒤에서 일어나는 일: LINE 프리미엄콜 개발기",
+    "url": "https://techblog.lycorp.co.jp/ko/line-premium-call-recording",
+    "date": "2026-11-06T02:00:00.000Z",
+    "source": "LINE Engineering",
+    "sourceId": "line",
+    "sourceColor": "#00b300"
+  },
+  {
+    "id": "kakao-tech:https://tech.kakao.com/posts/846",
+    "title": "AI 에이전트를 위한 멀티모달 의사결정 모델 ‘Kanana-2-v-decide’ 오픈소스 공개",
+    "url": "https://tech.kakao.com/posts/846",
+    "date": "2026-11-05T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "daangn:https://medium.com/daangn/%EA%B5%AD%EB%82%B4-%EC%B5%9C%EC%B4%88-%EA%B4%91%EA%B3%A0-mcp%EB%A5%BC-%EC%B6%9C%EC%8B%9C%ED%95%98%EB%A9%B0-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%97%AD%ED%95%A0%EC%9D%80-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EB%84%93%EC%96%B4%EC%A1%8C%EC%9D%84%EA%B9%8C-8dea7fe41c07?source=rss----4505f82a2dbd---4",
     "title": "국내 최초 광고 MCP를 출시하며, 개발자의 역할은 어디까지 넓어졌을까?",
     "url": "https://medium.com/daangn/%EA%B5%AD%EB%82%B4-%EC%B5%9C%EC%B4%88-%EA%B4%91%EA%B3%A0-mcp%EB%A5%BC-%EC%B6%9C%EC%8B%9C%ED%95%98%EB%A9%B0-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-%EC%97%AD%ED%95%A0%EC%9D%80-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80-%EB%84%93%EC%96%B4%EC%A1%8C%EC%9D%84%EA%B9%8C-8dea7fe41c07?source=rss----4505f82a2dbd---4",
