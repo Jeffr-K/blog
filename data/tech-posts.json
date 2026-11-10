@@ -385,14 +385,5 @@
     "source": "당근 Tech",
     "sourceId": "daangn",
     "sourceColor": "#ff6f0f"
-  },
-  {
-    "id": "nhn:https://meetup.nhncloud.com/posts/420",
-    "title": "바겐세일은 끝난다",
-    "url": "https://meetup.nhncloud.com/posts/420",
-    "date": "2026-08-12T00:45:26.000Z",
-    "source": "NHN Cloud",
-    "sourceId": "nhn",
-    "sourceColor": "#00a0e8"
   }
 ]
