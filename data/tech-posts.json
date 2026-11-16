@@ -367,14 +367,5 @@
     "source": "당근 Tech",
     "sourceId": "daangn",
     "sourceColor": "#ff6f0f"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/ai-agent-platform-sage-dev-log-part-1",
-    "title": "보안 업무를 위한 AI 에이전트 플랫폼 「SAGE」 개발기 1편: 판단은 사람에게 남기는 설계",
-    "url": "https://techblog.lycorp.co.jp/ko/ai-agent-platform-sage-dev-log-part-1",
-    "date": "2026-08-18T05:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
