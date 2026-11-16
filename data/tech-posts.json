@@ -9,6 +9,15 @@
     "sourceColor": "#00b300"
   },
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/847",
+    "title": "잘 만들었다면, 잘 배운 것일까? : 카카오테크 캠퍼스가 고민한 주니어 개발자의 성장",
+    "url": "https://tech.kakao.com/posts/847",
+    "date": "2026-11-08T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "line:https://techblog.lycorp.co.jp/ko/line-premium-call-recording",
     "title": "녹화 버튼 뒤에서 일어나는 일: LINE 프리미엄콜 개발기",
     "url": "https://techblog.lycorp.co.jp/ko/line-premium-call-recording",
