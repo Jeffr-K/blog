@@ -1,5 +1,14 @@
 [
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/849",
+    "title": "if(kakao)26 현장 스케치",
+    "url": "https://tech.kakao.com/posts/849",
+    "date": "2026-11-16T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "line:https://techblog.lycorp.co.jp/ko/defcon-ctf-2026-finals",
     "title": "DEF CON CTF 2026 본선 참가기",
     "url": "https://techblog.lycorp.co.jp/ko/defcon-ctf-2026-finals",
