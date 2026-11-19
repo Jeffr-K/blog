@@ -385,14 +385,5 @@
     "source": "NHN Cloud",
     "sourceId": "nhn",
     "sourceColor": "#00a0e8"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/japanese-search-kuromoji-to-sudachi",
-    "title": "일본어 상품 검색 정확도 높이기: Elasticsearch + Kuromoji에서 OpenSearch + Sudachi로",
-    "url": "https://techblog.lycorp.co.jp/ko/japanese-search-kuromoji-to-sudachi",
-    "date": "2026-08-21T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
