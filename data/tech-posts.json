@@ -385,14 +385,5 @@
     "source": "Kakao Tech",
     "sourceId": "kakao-tech",
     "sourceColor": "#f9e000"
-  },
-  {
-    "id": "nhn:https://meetup.nhncloud.com/posts/421",
-    "title": "양자 시대를 대비하는 개발자의 암호학 가이드(PQC-ML-KEM)",
-    "url": "https://meetup.nhncloud.com/posts/421",
-    "date": "2026-08-24T03:54:26.000Z",
-    "source": "NHN Cloud",
-    "sourceId": "nhn",
-    "sourceColor": "#00a0e8"
   }
 ]
