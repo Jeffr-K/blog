@@ -1,5 +1,23 @@
 [
   {
+    "id": "daangn:https://medium.com/daangn/why-cant-my-running-pods-be-reached-our-journey-to-kube-proxy-nftables-mode-6fceb1d2a5f7?source=rss----4505f82a2dbd---4",
+    "title": "Why Can’t My Running Pods Be Reached? Our Journey to kube-proxy nftables Mode",
+    "url": "https://medium.com/daangn/why-cant-my-running-pods-be-reached-our-journey-to-kube-proxy-nftables-mode-6fceb1d2a5f7?source=rss----4505f82a2dbd---4",
+    "date": "2026-11-24T05:46:20.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
+    "id": "daangn:https://medium.com/daangn/%ED%8C%8C%EB%93%9C%EB%8A%94-%EB%96%B4%EB%8A%94%EB%8D%B0-%EC%99%9C-%ED%86%B5%EC%8B%A0%EC%9D%B4-%EC%95%88-%EB%90%A0%EA%B9%8C-kube-proxy-nftables-%EC%A0%84%ED%99%98-%EC%97%AC%EC%A0%95-545dfd2cfc4f?source=rss----4505f82a2dbd---4",
+    "title": "파드는 떴는데 왜 통신이 안 될까? kube-proxy nftables 전환 여정",
+    "url": "https://medium.com/daangn/%ED%8C%8C%EB%93%9C%EB%8A%94-%EB%96%B4%EB%8A%94%EB%8D%B0-%EC%99%9C-%ED%86%B5%EC%8B%A0%EC%9D%B4-%EC%95%88-%EB%90%A0%EA%B9%8C-kube-proxy-nftables-%EC%A0%84%ED%99%98-%EC%97%AC%EC%A0%95-545dfd2cfc4f?source=rss----4505f82a2dbd---4",
+    "date": "2026-11-24T05:45:56.000Z",
+    "source": "당근 Tech",
+    "sourceId": "daangn",
+    "sourceColor": "#ff6f0f"
+  },
+  {
     "id": "line:https://techblog.lycorp.co.jp/ko/external-guardrails-for-ai-security",
     "title": "AI 시대 필수 보안: 외부 가드레일 완벽 가이드",
     "url": "https://techblog.lycorp.co.jp/ko/external-guardrails-for-ai-security",
