@@ -394,14 +394,5 @@
     "source": "LINE Engineering",
     "sourceId": "line",
     "sourceColor": "#00b300"
-  },
-  {
-    "id": "kakao-tech:https://tech.kakao.com/posts/830",
-    "title": "지역 AI 생태계의 새로운 가능성, 카카오 AI 돛 Summit 26을 개최합니다!",
-    "url": "https://tech.kakao.com/posts/830",
-    "date": "2026-08-26T15:00:00.000Z",
-    "source": "Kakao Tech",
-    "sourceId": "kakao-tech",
-    "sourceColor": "#f9e000"
   }
 ]
