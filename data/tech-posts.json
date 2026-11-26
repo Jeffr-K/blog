@@ -1,5 +1,14 @@
 [
   {
+    "id": "kakao-tech:https://tech.kakao.com/posts/850",
+    "title": "행사 순간을 함께 나누는 한마디, if(kakao)26 네트워킹 스크린 제작기",
+    "url": "https://tech.kakao.com/posts/850",
+    "date": "2026-11-25T15:00:00.000Z",
+    "source": "Kakao Tech",
+    "sourceId": "kakao-tech",
+    "sourceColor": "#f9e000"
+  },
+  {
     "id": "daangn:https://medium.com/daangn/why-cant-my-running-pods-be-reached-our-journey-to-kube-proxy-nftables-mode-6fceb1d2a5f7?source=rss----4505f82a2dbd---4",
     "title": "Why Can’t My Running Pods Be Reached? Our Journey to kube-proxy nftables Mode",
     "url": "https://medium.com/daangn/why-cant-my-running-pods-be-reached-our-journey-to-kube-proxy-nftables-mode-6fceb1d2a5f7?source=rss----4505f82a2dbd---4",
@@ -376,23 +385,5 @@
     "source": "Kakao Tech",
     "sourceId": "kakao-tech",
     "sourceColor": "#f9e000"
-  },
-  {
-    "id": "woowahan:https://techblog.woowahan.com/27268",
-    "title": "AI에게 만드는 법 대신 실패하는 법을 묻다: 포토그래퍼의 수천 명 동시 접속 게임 만들기",
-    "url": "https://techblog.woowahan.com/27268/",
-    "date": "2026-08-28T06:46:55.000Z",
-    "source": "우아한기술블로그",
-    "sourceId": "woowahan",
-    "sourceColor": "#f04452"
-  },
-  {
-    "id": "line:https://techblog.lycorp.co.jp/ko/llm-wiki-code-driven-knowledge-ssot",
-    "title": "LLM Wiki: 코드 기준으로 자동 최신화되는 도메인 지식 SSOT 만들기",
-    "url": "https://techblog.lycorp.co.jp/ko/llm-wiki-code-driven-knowledge-ssot",
-    "date": "2026-08-28T02:00:00.000Z",
-    "source": "LINE Engineering",
-    "sourceId": "line",
-    "sourceColor": "#00b300"
   }
 ]
